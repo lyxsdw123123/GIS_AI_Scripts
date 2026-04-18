@@ -8,16 +8,18 @@ import pandas as pd
 REQUIRED_COLS=("name","lat","lon")
 
 def parse_args() -> argparse.Namespace:
-    parser=argparse.ArgumentParser()
-    parser.add_argument("--xlsx", default=None)
-    parser.add_argument("--outdir", default=None)
-    parser.add_argument("--zoom", type=int, default=12)
-    parser.add_argument("--no-html", action="store_true")
-    parser.add_argument("--geojson", action="store_true")
-    parser.add_argument("--shp", action="store_true")
-    parser.add_argument("--html-path", default=None)
-    parser.add_argument("--geojson-path", default=None)
-    parser.add_argument("--shp-path", default=None)
+    parser=argparse.ArgumentParser(
+        description="将 Excel（字段：name/lat/lon）转换为 HTML 地图，并可选导出 GeoJSON / Shapefile。",
+    )
+    parser.add_argument("--xlsx", default=None, help="输入 Excel 路径；不填则默认 data/data.xlsx")
+    parser.add_argument("--outdir", default=None, help="输出目录；不填则默认 output/")
+    parser.add_argument("--zoom", type=int, default=12, help="HTML 地图初始缩放级别（默认 12）")
+    parser.add_argument("--no-html", action="store_true", help="不生成 HTML 地图")
+    parser.add_argument("--geojson", action="store_true", help="导出 GeoJSON（需要安装 geopandas + shapely）")
+    parser.add_argument("--shp", action="store_true", help="导出 Shapefile（需要安装 geopandas + shapely）")
+    parser.add_argument("--html-path", default=None, help="HTML 输出路径；绝对路径直接使用，相对路径基于 outdir")
+    parser.add_argument("--geojson-path", default=None, help="GeoJSON 输出路径；绝对路径直接使用，相对路径基于 outdir")
+    parser.add_argument("--shp-path", default=None, help="SHP 输出路径；绝对路径直接使用，相对路径基于 outdir")
     return parser.parse_args()
 
 def resolve_output_path(output_dir: str, provided_path: str | None, default_name: str) -> str:
