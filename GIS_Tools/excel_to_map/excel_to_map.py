@@ -15,7 +15,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--no-html", action="store_true")
     parser.add_argument("--geojson", action="store_true")
     parser.add_argument("--shp", action="store_true")
+    parser.add_argument("--html-path", default=None)
+    parser.add_argument("--geojson-path", default=None)
+    parser.add_argument("--shp-path", default=None)
     return parser.parse_args()
+
+def resolve_output_path(output_dir: str, provided_path: str | None, default_name: str) -> str:
+    if not provided_path:
+        return os.path.join(output_dir, default_name)
+    if os.path.isabs(provided_path):
+        return provided_path
+    return os.path.join(output_dir, provided_path)
 
 #读取数据
 def load_points(xlsx_path: str) -> pd.DataFrame:
@@ -79,12 +89,18 @@ def main() -> None:
 
     df=load_points(data_path)
     if not args.no_html:
-        build_map(df, zoom_start=args.zoom).save(os.path.join(output_dir, "map.html"))
+        html_path=resolve_output_path(output_dir, args.html_path, "map.html")
+        os.makedirs(os.path.dirname(html_path) or ".", exist_ok=True)
+        build_map(df, zoom_start=args.zoom).save(html_path)
     if args.geojson or args.shp:
+        geojson_path=resolve_output_path(output_dir, args.geojson_path, "points.geojson")
+        shp_path=resolve_output_path(output_dir, args.shp_path, "points.shp")
+        os.makedirs(os.path.dirname(geojson_path) or ".", exist_ok=True)
+        os.makedirs(os.path.dirname(shp_path) or ".", exist_ok=True)
         export_vectors(
             df,
-            os.path.join(output_dir, "points.geojson"),
-            os.path.join(output_dir, "points.shp"),
+            geojson_path,
+            shp_path,
             args.geojson,
             args.shp,
         )

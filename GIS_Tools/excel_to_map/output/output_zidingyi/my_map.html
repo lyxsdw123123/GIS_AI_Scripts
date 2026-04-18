@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_18f393e32021242536a6cd875817a3b8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_18f393e32021242536a6cd875817a3b8" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_18f393e32021242536a6cd875817a3b8 = L.map(
+                "map_18f393e32021242536a6cd875817a3b8",
+                {
+                    center: [28.18, 112.94],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1b9c28092a94f0bee4d4d6dea613c259 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1b9c28092a94f0bee4d4d6dea613c259.addTo(map_18f393e32021242536a6cd875817a3b8);
+        
+    
+            var marker_d4d0d74ed2983e93b0281a22dcf55e06 = L.marker(
+                [28.18, 112.94],
+                {
+}
+            ).addTo(map_18f393e32021242536a6cd875817a3b8);
+        
+    
+        var popup_e2fb8b031eb0e65871bb78daaf6ac9c0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_731ffa84ac4e88beb676c4211713a3fc = $(`<div id="html_731ffa84ac4e88beb676c4211713a3fc" style="width: 100.0%; height: 100.0%;">HNU</div>`)[0];
+                popup_e2fb8b031eb0e65871bb78daaf6ac9c0.setContent(html_731ffa84ac4e88beb676c4211713a3fc);
+            
+        
+
+        marker_d4d0d74ed2983e93b0281a22dcf55e06.bindPopup(popup_e2fb8b031eb0e65871bb78daaf6ac9c0)
+        ;
+
+        
+    
+    
+            var marker_5e88d9ab41ca6900b4b9d124dfcc4fa4 = L.marker(
+                [28.19, 112.97],
+                {
+}
+            ).addTo(map_18f393e32021242536a6cd875817a3b8);
+        
+    
+        var popup_3710373f900ef7467480f3547d769449 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20bf14e605d7de9d614666d86f69d337 = $(`<div id="html_20bf14e605d7de9d614666d86f69d337" style="width: 100.0%; height: 100.0%;">Wuyi Square</div>`)[0];
+                popup_3710373f900ef7467480f3547d769449.setContent(html_20bf14e605d7de9d614666d86f69d337);
+            
+        
+
+        marker_5e88d9ab41ca6900b4b9d124dfcc4fa4.bindPopup(popup_3710373f900ef7467480f3547d769449)
+        ;
+
+        
+    
+</script>
+</html>
