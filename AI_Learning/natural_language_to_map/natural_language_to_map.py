@@ -18,6 +18,7 @@ ROOT_DIR = Path(__file__).resolve().parents[2]
 sys.path.append(str(ROOT_DIR))
 
 from config import AMAP_KEY
+from llm_backend import parse_query
 
 
 # ==================================================
@@ -26,40 +27,6 @@ from config import AMAP_KEY
 BASE_DIR = Path(__file__).resolve().parent
 OUTPUT_DIR = BASE_DIR / "output"
 OUTPUT_DIR.mkdir(exist_ok=True)
-
-
-# ==================================================
-# 自然语言解析（简单规则版）
-# ==================================================
-def parse_query(query: str):
-    city_list = ["长沙", "武汉", "北京", "上海", "广州", "深圳", "成都", "杭州", "南京", "西安"]
-
-    category_map = {
-        "高校": "大学",
-        "大学": "大学",
-        "医院": "医院",
-        "咖啡": "咖啡厅",
-        "咖啡馆": "咖啡厅",
-        "景点": "旅游景点",
-        "地铁": "地铁站",
-        "火锅": "火锅店",
-        "商场": "购物中心"
-    }
-
-    city = None
-    keyword = None
-
-    for c in city_list:
-        if c in query:
-            city = c
-            break
-
-    for k in category_map:
-        if k in query:
-            keyword = category_map[k]
-            break
-
-    return city, keyword
 
 
 # ==================================================

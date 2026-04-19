@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_211e8399b4ec568a3dcaf42fd2463cfe {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_211e8399b4ec568a3dcaf42fd2463cfe" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_211e8399b4ec568a3dcaf42fd2463cfe = L.map(
+                "map_211e8399b4ec568a3dcaf42fd2463cfe",
+                {
+                    center: [30.536243, 114.364514],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d1e2e609a16cc3a5d46caa46cc4398c7 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d1e2e609a16cc3a5d46caa46cc4398c7.addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+            var marker_19e739b50b1fefcfcde42019ce5f1256 = L.marker(
+                [30.536243, 114.364514],
+                {
+}
+            ).addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+        var popup_c3579f3626492d88be96d8fd9e28aabd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7f845434f1ab312e1944283dceaca082 = $(`<div id="html_7f845434f1ab312e1944283dceaca082" style="width: 100.0%; height: 100.0%;">武汉大学<br>珞珈山街道八一路299号</div>`)[0];
+                popup_c3579f3626492d88be96d8fd9e28aabd.setContent(html_7f845434f1ab312e1944283dceaca082);
+            
+        
+
+        marker_19e739b50b1fefcfcde42019ce5f1256.bindPopup(popup_c3579f3626492d88be96d8fd9e28aabd)
+        ;
+
+        
+    
+    
+            marker_19e739b50b1fefcfcde42019ce5f1256.bindTooltip(
+                `<div>
+                     武汉大学
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a220449f564149268c4b18bb5d9e1dea = L.marker(
+                [30.528548, 114.359739],
+                {
+}
+            ).addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+        var popup_3c9d4627bfe85b7ffa38a8c0181737a8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1acbd1bd7c73b5dbfb94da11f4e48f1e = $(`<div id="html_1acbd1bd7c73b5dbfb94da11f4e48f1e" style="width: 100.0%; height: 100.0%;">武汉大学信息学部<br>珞喻路129号</div>`)[0];
+                popup_3c9d4627bfe85b7ffa38a8c0181737a8.setContent(html_1acbd1bd7c73b5dbfb94da11f4e48f1e);
+            
+        
+
+        marker_a220449f564149268c4b18bb5d9e1dea.bindPopup(popup_3c9d4627bfe85b7ffa38a8c0181737a8)
+        ;
+
+        
+    
+    
+            marker_a220449f564149268c4b18bb5d9e1dea.bindTooltip(
+                `<div>
+                     武汉大学信息学部
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6ea6e542dacb18741f37e8c9365c90bf = L.marker(
+                [30.554082, 114.353923],
+                {
+}
+            ).addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+        var popup_d906701941d31d84152f3c8fdb951222 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_312e30a62bf57f267b5f1a39501f4a30 = $(`<div id="html_312e30a62bf57f267b5f1a39501f4a30" style="width: 100.0%; height: 100.0%;">武汉大学医学部<br>东湖路115号(中南医院地铁站D口步行90米)</div>`)[0];
+                popup_d906701941d31d84152f3c8fdb951222.setContent(html_312e30a62bf57f267b5f1a39501f4a30);
+            
+        
+
+        marker_6ea6e542dacb18741f37e8c9365c90bf.bindPopup(popup_d906701941d31d84152f3c8fdb951222)
+        ;
+
+        
+    
+    
+            marker_6ea6e542dacb18741f37e8c9365c90bf.bindTooltip(
+                `<div>
+                     武汉大学医学部
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0d95d69d62ce3621606d7768c8e9fe15 = L.marker(
+                [30.538687, 114.371185],
+                {
+}
+            ).addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+        var popup_bb8e929c35258f440c29f304a78bac7e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_66cd42f6b75301e814120774763f2196 = $(`<div id="html_66cd42f6b75301e814120774763f2196" style="width: 100.0%; height: 100.0%;">武汉大学法学院<br>珞珈山16号武汉大学</div>`)[0];
+                popup_bb8e929c35258f440c29f304a78bac7e.setContent(html_66cd42f6b75301e814120774763f2196);
+            
+        
+
+        marker_0d95d69d62ce3621606d7768c8e9fe15.bindPopup(popup_bb8e929c35258f440c29f304a78bac7e)
+        ;
+
+        
+    
+    
+            marker_0d95d69d62ce3621606d7768c8e9fe15.bindTooltip(
+                `<div>
+                     武汉大学法学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f8245e91b11de08931d17f7609ec7ae5 = L.marker(
+                [30.543825, 114.362202],
+                {
+}
+            ).addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+        var popup_20c6b7e9d84fe815725b6a4b5107d3d2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f819157c88ec41d112762a029e6aba8c = $(`<div id="html_f819157c88ec41d112762a029e6aba8c" style="width: 100.0%; height: 100.0%;">武汉大学工学部一教<br>东湖南路8号</div>`)[0];
+                popup_20c6b7e9d84fe815725b6a4b5107d3d2.setContent(html_f819157c88ec41d112762a029e6aba8c);
+            
+        
+
+        marker_f8245e91b11de08931d17f7609ec7ae5.bindPopup(popup_20c6b7e9d84fe815725b6a4b5107d3d2)
+        ;
+
+        
+    
+    
+            marker_f8245e91b11de08931d17f7609ec7ae5.bindTooltip(
+                `<div>
+                     武汉大学工学部一教
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cbe3b317f906b0f95f131ee573318f09 = L.marker(
+                [30.538851, 114.373277],
+                {
+}
+            ).addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+        var popup_1fa64e1226239ba609cd638c7327eaed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c3fc3ebfd35bf4a23874cf7aad51d59d = $(`<div id="html_c3fc3ebfd35bf4a23874cf7aad51d59d" style="width: 100.0%; height: 100.0%;">武汉大学经济与管理学院<br>八一路299号珞珈山武汉大学</div>`)[0];
+                popup_1fa64e1226239ba609cd638c7327eaed.setContent(html_c3fc3ebfd35bf4a23874cf7aad51d59d);
+            
+        
+
+        marker_cbe3b317f906b0f95f131ee573318f09.bindPopup(popup_1fa64e1226239ba609cd638c7327eaed)
+        ;
+
+        
+    
+    
+            marker_cbe3b317f906b0f95f131ee573318f09.bindTooltip(
+                `<div>
+                     武汉大学经济与管理学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6c0d306f16aa52266e3c834ce22719c9 = L.marker(
+                [30.533352, 114.36061],
+                {
+}
+            ).addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+        var popup_2396511e5824b6a81d5a6f3dc884ce59 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2e53023f2dac05d5117aa2462877ed94 = $(`<div id="html_2e53023f2dac05d5117aa2462877ed94" style="width: 100.0%; height: 100.0%;">武汉大学生命科学学院<br>珞珈山街道八一路299号武汉大学</div>`)[0];
+                popup_2396511e5824b6a81d5a6f3dc884ce59.setContent(html_2e53023f2dac05d5117aa2462877ed94);
+            
+        
+
+        marker_6c0d306f16aa52266e3c834ce22719c9.bindPopup(popup_2396511e5824b6a81d5a6f3dc884ce59)
+        ;
+
+        
+    
+    
+            marker_6c0d306f16aa52266e3c834ce22719c9.bindTooltip(
+                `<div>
+                     武汉大学生命科学学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d1d0abc20bb395dd4dd216ef91bff0a3 = L.marker(
+                [30.534079, 114.36228],
+                {
+}
+            ).addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+        var popup_f5346fccc841ca81ed246ab13980053e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_42d0912bdca6bb7b6d7fbf694b20e8fb = $(`<div id="html_42d0912bdca6bb7b6d7fbf694b20e8fb" style="width: 100.0%; height: 100.0%;">武汉大学物理科学与技术学院<br>珞珈山路16号武汉大学</div>`)[0];
+                popup_f5346fccc841ca81ed246ab13980053e.setContent(html_42d0912bdca6bb7b6d7fbf694b20e8fb);
+            
+        
+
+        marker_d1d0abc20bb395dd4dd216ef91bff0a3.bindPopup(popup_f5346fccc841ca81ed246ab13980053e)
+        ;
+
+        
+    
+    
+            marker_d1d0abc20bb395dd4dd216ef91bff0a3.bindTooltip(
+                `<div>
+                     武汉大学物理科学与技术学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_994226c12f01efdfa1675638acdf4933 = L.marker(
+                [30.540413, 114.368115],
+                {
+}
+            ).addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+        var popup_1a50d76ac717045fcf4889647a0dbd1f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a69dc5d6f0e025ee62fb8c37ef0eba33 = $(`<div id="html_a69dc5d6f0e025ee62fb8c37ef0eba33" style="width: 100.0%; height: 100.0%;">武汉大学社会学院<br>八一路299号武汉大学内</div>`)[0];
+                popup_1a50d76ac717045fcf4889647a0dbd1f.setContent(html_a69dc5d6f0e025ee62fb8c37ef0eba33);
+            
+        
+
+        marker_994226c12f01efdfa1675638acdf4933.bindPopup(popup_1a50d76ac717045fcf4889647a0dbd1f)
+        ;
+
+        
+    
+    
+            marker_994226c12f01efdfa1675638acdf4933.bindTooltip(
+                `<div>
+                     武汉大学社会学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_712afe82ea346e2863f08bbc9066d572 = L.marker(
+                [30.540196, 114.365979],
+                {
+}
+            ).addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+        var popup_443f79ee54db9ae186e58b00228e6670 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_32a0dcdb4b31932c6e9a19765497f36f = $(`<div id="html_32a0dcdb4b31932c6e9a19765497f36f" style="width: 100.0%; height: 100.0%;">武汉大学理学院<br>珞珈山16号武汉大学樱花大道附近</div>`)[0];
+                popup_443f79ee54db9ae186e58b00228e6670.setContent(html_32a0dcdb4b31932c6e9a19765497f36f);
+            
+        
+
+        marker_712afe82ea346e2863f08bbc9066d572.bindPopup(popup_443f79ee54db9ae186e58b00228e6670)
+        ;
+
+        
+    
+    
+            marker_712afe82ea346e2863f08bbc9066d572.bindTooltip(
+                `<div>
+                     武汉大学理学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2db31cdfb93f8432b256389639ab5106 = L.marker(
+                [30.535582, 114.364587],
+                {
+}
+            ).addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+        var popup_27788cf246a79a8f08f4a7436261cf49 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3fccd102140081554392b9f6e3a4c666 = $(`<div id="html_3fccd102140081554392b9f6e3a4c666" style="width: 100.0%; height: 100.0%;">武汉大学梅园<br>珞珈山八一路483号武汉大学内(武汉大学内)</div>`)[0];
+                popup_27788cf246a79a8f08f4a7436261cf49.setContent(html_3fccd102140081554392b9f6e3a4c666);
+            
+        
+
+        marker_2db31cdfb93f8432b256389639ab5106.bindPopup(popup_27788cf246a79a8f08f4a7436261cf49)
+        ;
+
+        
+    
+    
+            marker_2db31cdfb93f8432b256389639ab5106.bindTooltip(
+                `<div>
+                     武汉大学梅园
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f2d959da0284515768dabf7afabbd89e = L.marker(
+                [30.538155, 114.367868],
+                {
+}
+            ).addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+        var popup_f6278d3f3ae7675ed6b4f9c2b096cc7a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4cb58229fb1e232d01bdc1da2b5c6e61 = $(`<div id="html_4cb58229fb1e232d01bdc1da2b5c6e61" style="width: 100.0%; height: 100.0%;">武汉大学马克思主义学院<br>珞珈山16号武汉大学</div>`)[0];
+                popup_f6278d3f3ae7675ed6b4f9c2b096cc7a.setContent(html_4cb58229fb1e232d01bdc1da2b5c6e61);
+            
+        
+
+        marker_f2d959da0284515768dabf7afabbd89e.bindPopup(popup_f6278d3f3ae7675ed6b4f9c2b096cc7a)
+        ;
+
+        
+    
+    
+            marker_f2d959da0284515768dabf7afabbd89e.bindTooltip(
+                `<div>
+                     武汉大学马克思主义学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_54ad1bb0ddd4c76d7cb0ad4b20fa5f78 = L.marker(
+                [30.536589, 114.375258],
+                {
+}
+            ).addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+        var popup_63f6acf87ffd4a4c432ff6fa0d0186df = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3a6563b66990fbe360cda410434e516f = $(`<div id="html_3a6563b66990fbe360cda410434e516f" style="width: 100.0%; height: 100.0%;">武汉大学信息管理学院<br>珞珈山16号武汉大学</div>`)[0];
+                popup_63f6acf87ffd4a4c432ff6fa0d0186df.setContent(html_3a6563b66990fbe360cda410434e516f);
+            
+        
+
+        marker_54ad1bb0ddd4c76d7cb0ad4b20fa5f78.bindPopup(popup_63f6acf87ffd4a4c432ff6fa0d0186df)
+        ;
+
+        
+    
+    
+            marker_54ad1bb0ddd4c76d7cb0ad4b20fa5f78.bindTooltip(
+                `<div>
+                     武汉大学信息管理学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_68c6d1ba0c319881c33798158fb76b70 = L.marker(
+                [30.542436, 114.36244],
+                {
+}
+            ).addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+        var popup_b47d46f03356641a78921fef9e92e65c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ae35ce72172d65fc7527ffea42711034 = $(`<div id="html_ae35ce72172d65fc7527ffea42711034" style="width: 100.0%; height: 100.0%;">武汉大学水利水电学院<br>东湖南路8号武汉大学桃园教8楼</div>`)[0];
+                popup_b47d46f03356641a78921fef9e92e65c.setContent(html_ae35ce72172d65fc7527ffea42711034);
+            
+        
+
+        marker_68c6d1ba0c319881c33798158fb76b70.bindPopup(popup_b47d46f03356641a78921fef9e92e65c)
+        ;
+
+        
+    
+    
+            marker_68c6d1ba0c319881c33798158fb76b70.bindTooltip(
+                `<div>
+                     武汉大学水利水电学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c5a199da6513c4cd54f3a710922ec616 = L.marker(
+                [30.522376, 114.366335],
+                {
+}
+            ).addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+        var popup_3451f90bdc2de3d28178f8d3e55e7af2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9c5ef3884ef9e08344763378d60c6745 = $(`<div id="html_9c5ef3884ef9e08344763378d60c6745" style="width: 100.0%; height: 100.0%;">武汉大学口腔医学院<br>珞喻路237号</div>`)[0];
+                popup_3451f90bdc2de3d28178f8d3e55e7af2.setContent(html_9c5ef3884ef9e08344763378d60c6745);
+            
+        
+
+        marker_c5a199da6513c4cd54f3a710922ec616.bindPopup(popup_3451f90bdc2de3d28178f8d3e55e7af2)
+        ;
+
+        
+    
+    
+            marker_c5a199da6513c4cd54f3a710922ec616.bindTooltip(
+                `<div>
+                     武汉大学口腔医学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e162d89036bd6e8589a25ad020496623 = L.marker(
+                [30.539478, 114.37089],
+                {
+}
+            ).addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+        var popup_e3b01b572e2283a1d5222df7caaa5ddc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af8c8ed504dc2da608712b127e196dd3 = $(`<div id="html_af8c8ed504dc2da608712b127e196dd3" style="width: 100.0%; height: 100.0%;">武汉大学外国语言文学学院<br>八一路299号珞珈山</div>`)[0];
+                popup_e3b01b572e2283a1d5222df7caaa5ddc.setContent(html_af8c8ed504dc2da608712b127e196dd3);
+            
+        
+
+        marker_e162d89036bd6e8589a25ad020496623.bindPopup(popup_e3b01b572e2283a1d5222df7caaa5ddc)
+        ;
+
+        
+    
+    
+            marker_e162d89036bd6e8589a25ad020496623.bindTooltip(
+                `<div>
+                     武汉大学外国语言文学学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7939d49afda3d8aa6bafa8ee38030603 = L.marker(
+                [30.534736, 114.358883],
+                {
+}
+            ).addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+        var popup_93e57edd2ae1397c7ddb487604596448 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1c4d924b2337afb6589658ab9a2e533e = $(`<div id="html_1c4d924b2337afb6589658ab9a2e533e" style="width: 100.0%; height: 100.0%;">武汉大学文学院<br>武汉大学振华楼</div>`)[0];
+                popup_93e57edd2ae1397c7ddb487604596448.setContent(html_1c4d924b2337afb6589658ab9a2e533e);
+            
+        
+
+        marker_7939d49afda3d8aa6bafa8ee38030603.bindPopup(popup_93e57edd2ae1397c7ddb487604596448)
+        ;
+
+        
+    
+    
+            marker_7939d49afda3d8aa6bafa8ee38030603.bindTooltip(
+                `<div>
+                     武汉大学文学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2740ea2ab00a4395b7500e222382e841 = L.marker(
+                [30.538783, 114.35739],
+                {
+}
+            ).addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+        var popup_376a83799517f73277e072cf7cfa375c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e05ff2f87ebf0836d884f4b304bf6fe1 = $(`<div id="html_e05ff2f87ebf0836d884f4b304bf6fe1" style="width: 100.0%; height: 100.0%;">武汉大学计算机学院<br>桂园餐厅</div>`)[0];
+                popup_376a83799517f73277e072cf7cfa375c.setContent(html_e05ff2f87ebf0836d884f4b304bf6fe1);
+            
+        
+
+        marker_2740ea2ab00a4395b7500e222382e841.bindPopup(popup_376a83799517f73277e072cf7cfa375c)
+        ;
+
+        
+    
+    
+            marker_2740ea2ab00a4395b7500e222382e841.bindTooltip(
+                `<div>
+                     武汉大学计算机学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_763b74d71cbf38d1121952aac4d1c22b = L.marker(
+                [30.536336, 114.359198],
+                {
+}
+            ).addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+        var popup_0417c7c09e7413d41f15594a5f7b1ace = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e5e6963b972eb42ad36b31b83623999a = $(`<div id="html_e5e6963b972eb42ad36b31b83623999a" style="width: 100.0%; height: 100.0%;">武汉大学化学与分子科学学院<br>八一路299号珞珈山</div>`)[0];
+                popup_0417c7c09e7413d41f15594a5f7b1ace.setContent(html_e5e6963b972eb42ad36b31b83623999a);
+            
+        
+
+        marker_763b74d71cbf38d1121952aac4d1c22b.bindPopup(popup_0417c7c09e7413d41f15594a5f7b1ace)
+        ;
+
+        
+    
+    
+            marker_763b74d71cbf38d1121952aac4d1c22b.bindTooltip(
+                `<div>
+                     武汉大学化学与分子科学学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a3b119b6489bd654d07e7d55b9ab4d3c = L.marker(
+                [30.53986, 114.36774],
+                {
+}
+            ).addTo(map_211e8399b4ec568a3dcaf42fd2463cfe);
+        
+    
+        var popup_769cbf972c674f5efde3c68263d1ad33 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8189a374f08df9d255da5aca682b1cff = $(`<div id="html_8189a374f08df9d255da5aca682b1cff" style="width: 100.0%; height: 100.0%;">武汉大学新闻与传播学院<br>八一路299号武汉大学内</div>`)[0];
+                popup_769cbf972c674f5efde3c68263d1ad33.setContent(html_8189a374f08df9d255da5aca682b1cff);
+            
+        
+
+        marker_a3b119b6489bd654d07e7d55b9ab4d3c.bindPopup(popup_769cbf972c674f5efde3c68263d1ad33)
+        ;
+
+        
+    
+    
+            marker_a3b119b6489bd654d07e7d55b9ab4d3c.bindTooltip(
+                `<div>
+                     武汉大学新闻与传播学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

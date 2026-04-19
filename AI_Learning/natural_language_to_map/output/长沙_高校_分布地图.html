@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_19d32b91b496c01db81a39f98c573e72 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_19d32b91b496c01db81a39f98c573e72" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_19d32b91b496c01db81a39f98c573e72 = L.map(
+                "map_19d32b91b496c01db81a39f98c573e72",
+                {
+                    center: [28.177932, 112.945185],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_24eed88e124c100b852fb561e31b798c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_24eed88e124c100b852fb561e31b798c.addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+            var marker_2cc18a0244964b629f71666f101caf4b = L.marker(
+                [28.177932, 112.945185],
+                {
+}
+            ).addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+        var popup_5c3a14ee0fcbd7be11f9ed9979fd48e7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a6bda4ea2979953070d4ffd0a422eb07 = $(`<div id="html_a6bda4ea2979953070d4ffd0a422eb07" style="width: 100.0%; height: 100.0%;">湖南大学<br>登高路1号(湖南大学地铁站2号口步行310米)</div>`)[0];
+                popup_5c3a14ee0fcbd7be11f9ed9979fd48e7.setContent(html_a6bda4ea2979953070d4ffd0a422eb07);
+            
+        
+
+        marker_2cc18a0244964b629f71666f101caf4b.bindPopup(popup_5c3a14ee0fcbd7be11f9ed9979fd48e7)
+        ;
+
+        
+    
+    
+            marker_2cc18a0244964b629f71666f101caf4b.bindTooltip(
+                `<div>
+                     湖南大学
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_06a9a0763affb32f37cf34eb14bc642e = L.marker(
+                [28.173113, 112.946042],
+                {
+}
+            ).addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+        var popup_dc33b90f93d938897aa00d660ae4e1e2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7e9e1ceb24533aece3920e646421f027 = $(`<div id="html_7e9e1ceb24533aece3920e646421f027" style="width: 100.0%; height: 100.0%;">湖南大学研究生院<br>麓山南路2号湖南大学</div>`)[0];
+                popup_dc33b90f93d938897aa00d660ae4e1e2.setContent(html_7e9e1ceb24533aece3920e646421f027);
+            
+        
+
+        marker_06a9a0763affb32f37cf34eb14bc642e.bindPopup(popup_dc33b90f93d938897aa00d660ae4e1e2)
+        ;
+
+        
+    
+    
+            marker_06a9a0763affb32f37cf34eb14bc642e.bindTooltip(
+                `<div>
+                     湖南大学研究生院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7fb5b367d4a5c48698ccbe6d9fec1a32 = L.marker(
+                [28.178, 112.947163],
+                {
+}
+            ).addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+        var popup_7120261a7719a492032924e40cf466fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d34c4e9e783fbb1017b3066604c7caa1 = $(`<div id="html_d34c4e9e783fbb1017b3066604c7caa1" style="width: 100.0%; height: 100.0%;">湖南大学机械与运载工程学院<br>麓山路327号湖南大学</div>`)[0];
+                popup_7120261a7719a492032924e40cf466fd.setContent(html_d34c4e9e783fbb1017b3066604c7caa1);
+            
+        
+
+        marker_7fb5b367d4a5c48698ccbe6d9fec1a32.bindPopup(popup_7120261a7719a492032924e40cf466fd)
+        ;
+
+        
+    
+    
+            marker_7fb5b367d4a5c48698ccbe6d9fec1a32.bindTooltip(
+                `<div>
+                     湖南大学机械与运载工程学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7739b42f8491039c64577b45017564aa = L.marker(
+                [28.179318, 112.942083],
+                {
+}
+            ).addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+        var popup_17424a202aa16bf0acf4bb5846ad5570 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_264b5043da4c86ebc024df79d633dbfa = $(`<div id="html_264b5043da4c86ebc024df79d633dbfa" style="width: 100.0%; height: 100.0%;">湖南大学外国语学院<br>麓山南路(湖南大学地铁站2号口步行400米)</div>`)[0];
+                popup_17424a202aa16bf0acf4bb5846ad5570.setContent(html_264b5043da4c86ebc024df79d633dbfa);
+            
+        
+
+        marker_7739b42f8491039c64577b45017564aa.bindPopup(popup_17424a202aa16bf0acf4bb5846ad5570)
+        ;
+
+        
+    
+    
+            marker_7739b42f8491039c64577b45017564aa.bindTooltip(
+                `<div>
+                     湖南大学外国语学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_71c6324e61a7fb21ca79f8fc3b42db8e = L.marker(
+                [28.181226, 112.950059],
+                {
+}
+            ).addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+        var popup_4e01f44f93b0a82aa37d2fbbb5757b35 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e7472a529453d6da3ba0d9f69e25963f = $(`<div id="html_e7472a529453d6da3ba0d9f69e25963f" style="width: 100.0%; height: 100.0%;">湖南大学人工智能与机器人学院<br>凤凰山街66号</div>`)[0];
+                popup_4e01f44f93b0a82aa37d2fbbb5757b35.setContent(html_e7472a529453d6da3ba0d9f69e25963f);
+            
+        
+
+        marker_71c6324e61a7fb21ca79f8fc3b42db8e.bindPopup(popup_4e01f44f93b0a82aa37d2fbbb5757b35)
+        ;
+
+        
+    
+    
+            marker_71c6324e61a7fb21ca79f8fc3b42db8e.bindTooltip(
+                `<div>
+                     湖南大学人工智能与机器人学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_da6a589b98e4a5943d9d0966d549b5ef = L.marker(
+                [28.178818, 112.948072],
+                {
+}
+            ).addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+        var popup_bdb778d5c0878f7911886492007d85be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fae9dceb2879cf8cdcf8ad671bc4ec0a = $(`<div id="html_fae9dceb2879cf8cdcf8ad671bc4ec0a" style="width: 100.0%; height: 100.0%;">湖南大学建筑与规划学院<br>麓山南路2号湖南大学</div>`)[0];
+                popup_bdb778d5c0878f7911886492007d85be.setContent(html_fae9dceb2879cf8cdcf8ad671bc4ec0a);
+            
+        
+
+        marker_da6a589b98e4a5943d9d0966d549b5ef.bindPopup(popup_bdb778d5c0878f7911886492007d85be)
+        ;
+
+        
+    
+    
+            marker_da6a589b98e4a5943d9d0966d549b5ef.bindTooltip(
+                `<div>
+                     湖南大学建筑与规划学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_722a9961d97b0d9272b6ae87ba0ad926 = L.marker(
+                [28.181196, 112.942432],
+                {
+}
+            ).addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+        var popup_8eb2d240e7d8e742a740144bb5489a6e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c80d0bac7b2ee76f80ea8c2439be8d38 = $(`<div id="html_c80d0bac7b2ee76f80ea8c2439be8d38" style="width: 100.0%; height: 100.0%;">湖南大学马克思主义学院<br>麓山南路2号湖南大学</div>`)[0];
+                popup_8eb2d240e7d8e742a740144bb5489a6e.setContent(html_c80d0bac7b2ee76f80ea8c2439be8d38);
+            
+        
+
+        marker_722a9961d97b0d9272b6ae87ba0ad926.bindPopup(popup_8eb2d240e7d8e742a740144bb5489a6e)
+        ;
+
+        
+    
+    
+            marker_722a9961d97b0d9272b6ae87ba0ad926.bindTooltip(
+                `<div>
+                     湖南大学马克思主义学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_08da6dcb3e8cca5aa7966590d3f1366b = L.marker(
+                [28.170066, 112.946344],
+                {
+}
+            ).addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+        var popup_7c4dc6e3ec12839a8fa5c31fb0c99b01 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a16fb50f88ad6d4efd2fc83ea5970ee3 = $(`<div id="html_a16fb50f88ad6d4efd2fc83ea5970ee3" style="width: 100.0%; height: 100.0%;">湖南大学数学学院<br>麓山南路2号</div>`)[0];
+                popup_7c4dc6e3ec12839a8fa5c31fb0c99b01.setContent(html_a16fb50f88ad6d4efd2fc83ea5970ee3);
+            
+        
+
+        marker_08da6dcb3e8cca5aa7966590d3f1366b.bindPopup(popup_7c4dc6e3ec12839a8fa5c31fb0c99b01)
+        ;
+
+        
+    
+    
+            marker_08da6dcb3e8cca5aa7966590d3f1366b.bindTooltip(
+                `<div>
+                     湖南大学数学学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_919d74e3526c74c6c24fb71840b1ba75 = L.marker(
+                [28.177471, 112.947938],
+                {
+}
+            ).addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+        var popup_ef0345c6a6230349692f8ce7007960b3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1844f1bea8acc1420f00f7143b47c2f4 = $(`<div id="html_1844f1bea8acc1420f00f7143b47c2f4" style="width: 100.0%; height: 100.0%;">湖南大学现代工程训练中心<br>麓山南路2号湖南大学湖南大学科技园附近</div>`)[0];
+                popup_ef0345c6a6230349692f8ce7007960b3.setContent(html_1844f1bea8acc1420f00f7143b47c2f4);
+            
+        
+
+        marker_919d74e3526c74c6c24fb71840b1ba75.bindPopup(popup_ef0345c6a6230349692f8ce7007960b3)
+        ;
+
+        
+    
+    
+            marker_919d74e3526c74c6c24fb71840b1ba75.bindTooltip(
+                `<div>
+                     湖南大学现代工程训练中心
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_820358455371461bb93148bbf2186485 = L.marker(
+                [28.177253, 112.946565],
+                {
+}
+            ).addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+        var popup_b61b65a22145d6c3655fd445be10fdf8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d605d157571ddd73ca76179632b2ba42 = $(`<div id="html_d605d157571ddd73ca76179632b2ba42" style="width: 100.0%; height: 100.0%;">湖南大学土木工程学院<br>麓山南路2号湖南大学</div>`)[0];
+                popup_b61b65a22145d6c3655fd445be10fdf8.setContent(html_d605d157571ddd73ca76179632b2ba42);
+            
+        
+
+        marker_820358455371461bb93148bbf2186485.bindPopup(popup_b61b65a22145d6c3655fd445be10fdf8)
+        ;
+
+        
+    
+    
+            marker_820358455371461bb93148bbf2186485.bindTooltip(
+                `<div>
+                     湖南大学土木工程学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6f0ac4b24fd9d4db24cd758b07e417f1 = L.marker(
+                [28.18139, 112.94549],
+                {
+}
+            ).addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+        var popup_3309533a7982fc20f06cc2d0edec7e52 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_668fcaf5c76244f9188d338be0af8aee = $(`<div id="html_668fcaf5c76244f9188d338be0af8aee" style="width: 100.0%; height: 100.0%;">湖南大学电气与信息工程学院<br>麓山南路2号湖南大学</div>`)[0];
+                popup_3309533a7982fc20f06cc2d0edec7e52.setContent(html_668fcaf5c76244f9188d338be0af8aee);
+            
+        
+
+        marker_6f0ac4b24fd9d4db24cd758b07e417f1.bindPopup(popup_3309533a7982fc20f06cc2d0edec7e52)
+        ;
+
+        
+    
+    
+            marker_6f0ac4b24fd9d4db24cd758b07e417f1.bindTooltip(
+                `<div>
+                     湖南大学电气与信息工程学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_37e0b6f5b41ae03f95c4a1ce631dcf09 = L.marker(
+                [28.182227, 112.945011],
+                {
+}
+            ).addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+        var popup_e33be33e8ed584ae38928df368eb726e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7776568335baa7479759890135e83142 = $(`<div id="html_7776568335baa7479759890135e83142" style="width: 100.0%; height: 100.0%;">湖南大学公共管理学院<br>麓山南路2号湖南大学九舍</div>`)[0];
+                popup_e33be33e8ed584ae38928df368eb726e.setContent(html_7776568335baa7479759890135e83142);
+            
+        
+
+        marker_37e0b6f5b41ae03f95c4a1ce631dcf09.bindPopup(popup_e33be33e8ed584ae38928df368eb726e)
+        ;
+
+        
+    
+    
+            marker_37e0b6f5b41ae03f95c4a1ce631dcf09.bindTooltip(
+                `<div>
+                     湖南大学公共管理学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2f091df5b034bc8839beb52b82b7da4a = L.marker(
+                [28.18169, 112.943267],
+                {
+}
+            ).addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+        var popup_6cde50c5cda01853b998f970c3df2e44 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_26c7ce04a3153aff5c190c73250e541e = $(`<div id="html_26c7ce04a3153aff5c190c73250e541e" style="width: 100.0%; height: 100.0%;">湖南大学中国语言文学学院<br>麓山南路2号湖南大学</div>`)[0];
+                popup_6cde50c5cda01853b998f970c3df2e44.setContent(html_26c7ce04a3153aff5c190c73250e541e);
+            
+        
+
+        marker_2f091df5b034bc8839beb52b82b7da4a.bindPopup(popup_6cde50c5cda01853b998f970c3df2e44)
+        ;
+
+        
+    
+    
+            marker_2f091df5b034bc8839beb52b82b7da4a.bindTooltip(
+                `<div>
+                     湖南大学中国语言文学学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ec2dfb7ba8f7497f11afd2ad10758ae7 = L.marker(
+                [28.187176, 112.94948],
+                {
+}
+            ).addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+        var popup_1b7636b3a683c6fa837c2dfbc243149d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b4217499bfa80d762226bf809ac526cd = $(`<div id="html_b4217499bfa80d762226bf809ac526cd" style="width: 100.0%; height: 100.0%;">湖南师范大学<br>麓山路36号</div>`)[0];
+                popup_1b7636b3a683c6fa837c2dfbc243149d.setContent(html_b4217499bfa80d762226bf809ac526cd);
+            
+        
+
+        marker_ec2dfb7ba8f7497f11afd2ad10758ae7.bindPopup(popup_1b7636b3a683c6fa837c2dfbc243149d)
+        ;
+
+        
+    
+    
+            marker_ec2dfb7ba8f7497f11afd2ad10758ae7.bindTooltip(
+                `<div>
+                     湖南师范大学
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a4567d5115aff3f373d7fc6893de1877 = L.marker(
+                [28.165542, 112.939249],
+                {
+}
+            ).addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+        var popup_d1bddf90239a3bc92bae6ea19ce513c0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_47c1b82d66746e2c9fcf9c290b916edf = $(`<div id="html_47c1b82d66746e2c9fcf9c290b916edf" style="width: 100.0%; height: 100.0%;">湖南师范大学(南院校区)<br>麓山南路437号</div>`)[0];
+                popup_d1bddf90239a3bc92bae6ea19ce513c0.setContent(html_47c1b82d66746e2c9fcf9c290b916edf);
+            
+        
+
+        marker_a4567d5115aff3f373d7fc6893de1877.bindPopup(popup_d1bddf90239a3bc92bae6ea19ce513c0)
+        ;
+
+        
+    
+    
+            marker_a4567d5115aff3f373d7fc6893de1877.bindTooltip(
+                `<div>
+                     湖南师范大学(南院校区)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7817b719040f393922f01e149eb3a718 = L.marker(
+                [28.183649, 112.95045],
+                {
+}
+            ).addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+        var popup_0ad7ef4cdcadf26d9dcf7cc198ca9ae3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_501a1704283c46ed663da06c20d95a29 = $(`<div id="html_501a1704283c46ed663da06c20d95a29" style="width: 100.0%; height: 100.0%;">湖南师范大学理学院<br>麓山路36号湖南师范大学</div>`)[0];
+                popup_0ad7ef4cdcadf26d9dcf7cc198ca9ae3.setContent(html_501a1704283c46ed663da06c20d95a29);
+            
+        
+
+        marker_7817b719040f393922f01e149eb3a718.bindPopup(popup_0ad7ef4cdcadf26d9dcf7cc198ca9ae3)
+        ;
+
+        
+    
+    
+            marker_7817b719040f393922f01e149eb3a718.bindTooltip(
+                `<div>
+                     湖南师范大学理学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_28ff64d14b1854013bc24670ebcb6266 = L.marker(
+                [28.186974, 112.946602],
+                {
+}
+            ).addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+        var popup_3f07b64d2cf504672c04f1df508baa3b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_08a795f064ce6d87374f442d746d768f = $(`<div id="html_08a795f064ce6d87374f442d746d768f" style="width: 100.0%; height: 100.0%;">湖南师范大学外国语学院<br>麓山路36号湖南师范大学</div>`)[0];
+                popup_3f07b64d2cf504672c04f1df508baa3b.setContent(html_08a795f064ce6d87374f442d746d768f);
+            
+        
+
+        marker_28ff64d14b1854013bc24670ebcb6266.bindPopup(popup_3f07b64d2cf504672c04f1df508baa3b)
+        ;
+
+        
+    
+    
+            marker_28ff64d14b1854013bc24670ebcb6266.bindTooltip(
+                `<div>
+                     湖南师范大学外国语学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3810420eb413244583b2b6ac50364efa = L.marker(
+                [28.183845, 112.953635],
+                {
+}
+            ).addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+        var popup_4b866882354f7b8a5392d8b1d5bc2ebd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e757f8a2c94f9ee7da027e630ca46fb3 = $(`<div id="html_e757f8a2c94f9ee7da027e630ca46fb3" style="width: 100.0%; height: 100.0%;">湖南师范大学教育科学学院<br>麓山路36号湖南师范大学</div>`)[0];
+                popup_4b866882354f7b8a5392d8b1d5bc2ebd.setContent(html_e757f8a2c94f9ee7da027e630ca46fb3);
+            
+        
+
+        marker_3810420eb413244583b2b6ac50364efa.bindPopup(popup_4b866882354f7b8a5392d8b1d5bc2ebd)
+        ;
+
+        
+    
+    
+            marker_3810420eb413244583b2b6ac50364efa.bindTooltip(
+                `<div>
+                     湖南师范大学教育科学学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_03a7215be0d9f95f6d6cb0f76e1be589 = L.marker(
+                [28.189722, 112.952543],
+                {
+}
+            ).addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+        var popup_e74e99df3f26841c4b739a66e5a7ef94 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f4013e5fdf596058f07e3c0d138f3ae7 = $(`<div id="html_f4013e5fdf596058f07e3c0d138f3ae7" style="width: 100.0%; height: 100.0%;">湖南师范大学长塘山<br>麓山路</div>`)[0];
+                popup_e74e99df3f26841c4b739a66e5a7ef94.setContent(html_f4013e5fdf596058f07e3c0d138f3ae7);
+            
+        
+
+        marker_03a7215be0d9f95f6d6cb0f76e1be589.bindPopup(popup_e74e99df3f26841c4b739a66e5a7ef94)
+        ;
+
+        
+    
+    
+            marker_03a7215be0d9f95f6d6cb0f76e1be589.bindTooltip(
+                `<div>
+                     湖南师范大学长塘山
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_af106d83ea6e07a4a9cc80d08399a33c = L.marker(
+                [28.183889, 112.953628],
+                {
+}
+            ).addTo(map_19d32b91b496c01db81a39f98c573e72);
+        
+    
+        var popup_7ac74267f5362e79f5a810da674d99ad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ea7d1b3706d1235750ccfa377a1b1dc9 = $(`<div id="html_ea7d1b3706d1235750ccfa377a1b1dc9" style="width: 100.0%; height: 100.0%;">湖南师范大学-田家炳教育书院<br>麓山路36号湖南师范大学</div>`)[0];
+                popup_7ac74267f5362e79f5a810da674d99ad.setContent(html_ea7d1b3706d1235750ccfa377a1b1dc9);
+            
+        
+
+        marker_af106d83ea6e07a4a9cc80d08399a33c.bindPopup(popup_7ac74267f5362e79f5a810da674d99ad)
+        ;
+
+        
+    
+    
+            marker_af106d83ea6e07a4a9cc80d08399a33c.bindTooltip(
+                `<div>
+                     湖南师范大学-田家炳教育书院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
