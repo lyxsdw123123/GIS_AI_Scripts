@@ -59,36 +59,6 @@ def call_qwen_json(messages, **kwargs):
         return None
 
 
-def parse_query_rule(query: str):
-    city_list = ["长沙", "武汉", "北京", "上海", "广州", "深圳", "成都", "杭州", "南京", "西安"]
-    category_map = {
-        "高校": "大学",
-        "大学": "大学",
-        "医院": "医院",
-        "咖啡": "咖啡厅",
-        "咖啡馆": "咖啡厅",
-        "景点": "旅游景点",
-        "地铁": "地铁站",
-        "火锅": "火锅店",
-        "商场": "购物中心",
-    }
-
-    city = None
-    keyword = None
-
-    for c in city_list:
-        if c in query:
-            city = c
-            break
-
-    for k in category_map:
-        if k in query:
-            keyword = category_map[k]
-            break
-
-    return city, keyword
-
-
 def parse_query(query: str):
     query = (query or "").strip()
     if not query:
@@ -110,6 +80,7 @@ def parse_query(query: str):
         temperature=0.2,
         max_tokens=256,
     )
+    print(f"llm_json={json.dumps(obj, ensure_ascii=False)}")
 
     city = None
     keyword = None
@@ -124,4 +95,4 @@ def parse_query(query: str):
     if keyword:
         return city, keyword
 
-    return parse_query_rule(query)
+    return None, None

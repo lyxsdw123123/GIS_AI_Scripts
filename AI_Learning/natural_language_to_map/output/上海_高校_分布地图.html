@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_36354c9aae11d1bef1d135e16fe48aeb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_36354c9aae11d1bef1d135e16fe48aeb" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_36354c9aae11d1bef1d135e16fe48aeb = L.map(
+                "map_36354c9aae11d1bef1d135e16fe48aeb",
+                {
+                    center: [31.212539, 121.471385],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e08d774f9abafd6c34ef228c06949c30 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e08d774f9abafd6c34ef228c06949c30.addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+            var marker_28b79090a78c7c67b8ff4c1da47b027d = L.marker(
+                [31.212539, 121.471385],
+                {
+}
+            ).addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+        var popup_eb73fdfcbccb8a93cc9581e634ce4086 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cee80d60f2379dab2e9c3ebbae557623 = $(`<div id="html_cee80d60f2379dab2e9c3ebbae557623" style="width: 100.0%; height: 100.0%;">上海交通大学医学院(黄浦校区)<br>重庆南路227号</div>`)[0];
+                popup_eb73fdfcbccb8a93cc9581e634ce4086.setContent(html_cee80d60f2379dab2e9c3ebbae557623);
+            
+        
+
+        marker_28b79090a78c7c67b8ff4c1da47b027d.bindPopup(popup_eb73fdfcbccb8a93cc9581e634ce4086)
+        ;
+
+        
+    
+    
+            marker_28b79090a78c7c67b8ff4c1da47b027d.bindTooltip(
+                `<div>
+                     上海交通大学医学院(黄浦校区)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_672d856d220996e76564882d30cd1e52 = L.marker(
+                [31.212249, 121.469976],
+                {
+}
+            ).addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+        var popup_ebb055ff6ac4adc2fc3c3ebb35c1eb26 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e341f39ecfd794f82d303cec52f00388 = $(`<div id="html_e341f39ecfd794f82d303cec52f00388" style="width: 100.0%; height: 100.0%;">上海交通大学医学院西区<br>重庆南路280号</div>`)[0];
+                popup_ebb055ff6ac4adc2fc3c3ebb35c1eb26.setContent(html_e341f39ecfd794f82d303cec52f00388);
+            
+        
+
+        marker_672d856d220996e76564882d30cd1e52.bindPopup(popup_ebb055ff6ac4adc2fc3c3ebb35c1eb26)
+        ;
+
+        
+    
+    
+            marker_672d856d220996e76564882d30cd1e52.bindTooltip(
+                `<div>
+                     上海交通大学医学院西区
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9f129c8be5a1b509c39e397eda40ac2d = L.marker(
+                [31.21282, 121.472635],
+                {
+}
+            ).addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+        var popup_aec820971c7172dc32235f99a154dd10 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3428a2e8506bae89fa2c0d9668a6d012 = $(`<div id="html_3428a2e8506bae89fa2c0d9668a6d012" style="width: 100.0%; height: 100.0%;">上海交通大学医学院东区<br>重庆南路227号(一大会址·新天地地铁站出入口步行360米)</div>`)[0];
+                popup_aec820971c7172dc32235f99a154dd10.setContent(html_3428a2e8506bae89fa2c0d9668a6d012);
+            
+        
+
+        marker_9f129c8be5a1b509c39e397eda40ac2d.bindPopup(popup_aec820971c7172dc32235f99a154dd10)
+        ;
+
+        
+    
+    
+            marker_9f129c8be5a1b509c39e397eda40ac2d.bindTooltip(
+                `<div>
+                     上海交通大学医学院东区
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_da39d5b0446f1a87511d494a0de20379 = L.marker(
+                [31.025626, 121.436882],
+                {
+}
+            ).addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+        var popup_92f944b5f6559bf01f932386c6876610 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb2bee6826771ba0430435203b225df2 = $(`<div id="html_cb2bee6826771ba0430435203b225df2" style="width: 100.0%; height: 100.0%;">上海交通大学(闵行本部校区)<br>东川路800号</div>`)[0];
+                popup_92f944b5f6559bf01f932386c6876610.setContent(html_cb2bee6826771ba0430435203b225df2);
+            
+        
+
+        marker_da39d5b0446f1a87511d494a0de20379.bindPopup(popup_92f944b5f6559bf01f932386c6876610)
+        ;
+
+        
+    
+    
+            marker_da39d5b0446f1a87511d494a0de20379.bindTooltip(
+                `<div>
+                     上海交通大学(闵行本部校区)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2c8813c10c1c2580a81453ef5d1f1826 = L.marker(
+                [31.021566, 121.438249],
+                {
+}
+            ).addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+        var popup_3a5a648bc3340e508f7f7c71360cac50 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_793c023fd23dd77a7a9dd917740ab9d4 = $(`<div id="html_793c023fd23dd77a7a9dd917740ab9d4" style="width: 100.0%; height: 100.0%;">上海交通大学闵行校区东上院<br>东川路800号上海交通大学闵行校区内(近东下院)</div>`)[0];
+                popup_3a5a648bc3340e508f7f7c71360cac50.setContent(html_793c023fd23dd77a7a9dd917740ab9d4);
+            
+        
+
+        marker_2c8813c10c1c2580a81453ef5d1f1826.bindPopup(popup_3a5a648bc3340e508f7f7c71360cac50)
+        ;
+
+        
+    
+    
+            marker_2c8813c10c1c2580a81453ef5d1f1826.bindTooltip(
+                `<div>
+                     上海交通大学闵行校区东上院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_99bcdde75a987e4ea0b03dc5610dfa7b = L.marker(
+                [31.018089, 121.429661],
+                {
+}
+            ).addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+        var popup_0daf13804166dd52cb9f22d8d7548886 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c0297cc55f1ff39bd6bbcc74c00321fd = $(`<div id="html_c0297cc55f1ff39bd6bbcc74c00321fd" style="width: 100.0%; height: 100.0%;">上海交通大学闵行校区菁菁堂<br>东川路800上海交通大学闵行校区</div>`)[0];
+                popup_0daf13804166dd52cb9f22d8d7548886.setContent(html_c0297cc55f1ff39bd6bbcc74c00321fd);
+            
+        
+
+        marker_99bcdde75a987e4ea0b03dc5610dfa7b.bindPopup(popup_0daf13804166dd52cb9f22d8d7548886)
+        ;
+
+        
+    
+    
+            marker_99bcdde75a987e4ea0b03dc5610dfa7b.bindTooltip(
+                `<div>
+                     上海交通大学闵行校区菁菁堂
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a034abe5769690b14bd569dcfa014b40 = L.marker(
+                [31.296443, 121.503458],
+                {
+}
+            ).addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+        var popup_679ea1b4953a784da0e43507c27a5b65 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b0c022510fef93f00a35d0b4ce685982 = $(`<div id="html_b0c022510fef93f00a35d0b4ce685982" style="width: 100.0%; height: 100.0%;">复旦大学邯郸校区<br>邯郸路220号(复旦大学地铁站2号口步行390米)</div>`)[0];
+                popup_679ea1b4953a784da0e43507c27a5b65.setContent(html_b0c022510fef93f00a35d0b4ce685982);
+            
+        
+
+        marker_a034abe5769690b14bd569dcfa014b40.bindPopup(popup_679ea1b4953a784da0e43507c27a5b65)
+        ;
+
+        
+    
+    
+            marker_a034abe5769690b14bd569dcfa014b40.bindTooltip(
+                `<div>
+                     复旦大学邯郸校区
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f99a5ec8d897aafc030abbdbb3fa2dec = L.marker(
+                [31.296574, 121.506385],
+                {
+}
+            ).addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+        var popup_9d7678eca8ab166df3c2f790f5a7e5d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a7ac4f9cf8ecdf503353a6aa5dd8cf99 = $(`<div id="html_a7ac4f9cf8ecdf503353a6aa5dd8cf99" style="width: 100.0%; height: 100.0%;">复旦大学邯郸校区管理学院<br>国顺路670号</div>`)[0];
+                popup_9d7678eca8ab166df3c2f790f5a7e5d1.setContent(html_a7ac4f9cf8ecdf503353a6aa5dd8cf99);
+            
+        
+
+        marker_f99a5ec8d897aafc030abbdbb3fa2dec.bindPopup(popup_9d7678eca8ab166df3c2f790f5a7e5d1)
+        ;
+
+        
+    
+    
+            marker_f99a5ec8d897aafc030abbdbb3fa2dec.bindTooltip(
+                `<div>
+                     复旦大学邯郸校区管理学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4a5b275f53abbff743cac5d34ba4609c = L.marker(
+                [31.299712, 121.509433],
+                {
+}
+            ).addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+        var popup_d82fcbd161967c59e6645cc58a0a8b85 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_82c45ba895ac5caf5f8aab6bc0b8c2d9 = $(`<div id="html_82c45ba895ac5caf5f8aab6bc0b8c2d9" style="width: 100.0%; height: 100.0%;">复旦大学邯郸校区新闻学院<br>国定路400号</div>`)[0];
+                popup_d82fcbd161967c59e6645cc58a0a8b85.setContent(html_82c45ba895ac5caf5f8aab6bc0b8c2d9);
+            
+        
+
+        marker_4a5b275f53abbff743cac5d34ba4609c.bindPopup(popup_d82fcbd161967c59e6645cc58a0a8b85)
+        ;
+
+        
+    
+    
+            marker_4a5b275f53abbff743cac5d34ba4609c.bindTooltip(
+                `<div>
+                     复旦大学邯郸校区新闻学院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_56e5c36538b7a7c958ec218afcac61f7 = L.marker(
+                [31.315929, 121.393603],
+                {
+}
+            ).addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+        var popup_f5eb496ec75d6a45d025708d7dfbf136 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3ddcef7ae115e66cce865f672999dfd8 = $(`<div id="html_3ddcef7ae115e66cce865f672999dfd8" style="width: 100.0%; height: 100.0%;">上海大学(宝山校区)<br>上大路99号</div>`)[0];
+                popup_f5eb496ec75d6a45d025708d7dfbf136.setContent(html_3ddcef7ae115e66cce865f672999dfd8);
+            
+        
+
+        marker_56e5c36538b7a7c958ec218afcac61f7.bindPopup(popup_f5eb496ec75d6a45d025708d7dfbf136)
+        ;
+
+        
+    
+    
+            marker_56e5c36538b7a7c958ec218afcac61f7.bindTooltip(
+                `<div>
+                     上海大学(宝山校区)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0f19938fe3a44265acb63aa206996c1b = L.marker(
+                [31.282587, 121.50225],
+                {
+}
+            ).addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+        var popup_b3d3e221e3b40fd118cc10c7ef1b3bd4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b073fbf456f12472510f401ed1af9c7 = $(`<div id="html_7b073fbf456f12472510f401ed1af9c7" style="width: 100.0%; height: 100.0%;">同济大学(四平路校区)<br>四平路1239号</div>`)[0];
+                popup_b3d3e221e3b40fd118cc10c7ef1b3bd4.setContent(html_7b073fbf456f12472510f401ed1af9c7);
+            
+        
+
+        marker_0f19938fe3a44265acb63aa206996c1b.bindPopup(popup_b3d3e221e3b40fd118cc10c7ef1b3bd4)
+        ;
+
+        
+    
+    
+            marker_0f19938fe3a44265acb63aa206996c1b.bindTooltip(
+                `<div>
+                     同济大学(四平路校区)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ec4377cea151da5dfee7955d504e7e6f = L.marker(
+                [31.279464, 121.499161],
+                {
+}
+            ).addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+        var popup_53fd7df45c528f573909341cb0cd5d58 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8d63ab936b990f14f731337e57569885 = $(`<div id="html_8d63ab936b990f14f731337e57569885" style="width: 100.0%; height: 100.0%;">同济大学四平路校区南区<br>赤峰路67同济大学</div>`)[0];
+                popup_53fd7df45c528f573909341cb0cd5d58.setContent(html_8d63ab936b990f14f731337e57569885);
+            
+        
+
+        marker_ec4377cea151da5dfee7955d504e7e6f.bindPopup(popup_53fd7df45c528f573909341cb0cd5d58)
+        ;
+
+        
+    
+    
+            marker_ec4377cea151da5dfee7955d504e7e6f.bindTooltip(
+                `<div>
+                     同济大学四平路校区南区
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b4636a26d7eeded4df77749898428cbe = L.marker(
+                [31.199005, 121.433095],
+                {
+}
+            ).addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+        var popup_61c3cb5a579806b34bf6ccb31aeaf124 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a8a378b7b340ff7b7ac4dbaea140d192 = $(`<div id="html_a8a378b7b340ff7b7ac4dbaea140d192" style="width: 100.0%; height: 100.0%;">上海交通大学徐汇校区<br>华山路1954号</div>`)[0];
+                popup_61c3cb5a579806b34bf6ccb31aeaf124.setContent(html_a8a378b7b340ff7b7ac4dbaea140d192);
+            
+        
+
+        marker_b4636a26d7eeded4df77749898428cbe.bindPopup(popup_61c3cb5a579806b34bf6ccb31aeaf124)
+        ;
+
+        
+    
+    
+            marker_b4636a26d7eeded4df77749898428cbe.bindTooltip(
+                `<div>
+                     上海交通大学徐汇校区
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_707b5b20882f43b48f5d939443cb0b8c = L.marker(
+                [31.227938, 121.40468],
+                {
+}
+            ).addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+        var popup_82aea1208defd5cc47c66ed1c2e46c40 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_247e29957ada5afdb79fb1b47f3f4ef1 = $(`<div id="html_247e29957ada5afdb79fb1b47f3f4ef1" style="width: 100.0%; height: 100.0%;">华东师范大学普陀校区<br>中山北路3663号</div>`)[0];
+                popup_82aea1208defd5cc47c66ed1c2e46c40.setContent(html_247e29957ada5afdb79fb1b47f3f4ef1);
+            
+        
+
+        marker_707b5b20882f43b48f5d939443cb0b8c.bindPopup(popup_82aea1208defd5cc47c66ed1c2e46c40)
+        ;
+
+        
+    
+    
+            marker_707b5b20882f43b48f5d939443cb0b8c.bindTooltip(
+                `<div>
+                     华东师范大学普陀校区
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_779848c0ff2c5481568b4524600edab1 = L.marker(
+                [31.031449, 121.45372],
+                {
+}
+            ).addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+        var popup_f7d96588e1440b1721fd36992f700987 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a8f4a892b7b9999fe3e73e811e5fb92c = $(`<div id="html_a8f4a892b7b9999fe3e73e811e5fb92c" style="width: 100.0%; height: 100.0%;">华东师范大学闵行校区<br>东川路500号</div>`)[0];
+                popup_f7d96588e1440b1721fd36992f700987.setContent(html_a8f4a892b7b9999fe3e73e811e5fb92c);
+            
+        
+
+        marker_779848c0ff2c5481568b4524600edab1.bindPopup(popup_f7d96588e1440b1721fd36992f700987)
+        ;
+
+        
+    
+    
+            marker_779848c0ff2c5481568b4524600edab1.bindTooltip(
+                `<div>
+                     华东师范大学闵行校区
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_eda05ecb0adeb36e58be5b4e7be865e5 = L.marker(
+                [31.161112, 121.418456],
+                {
+}
+            ).addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+        var popup_eae6dee7d66b7d6ee9a80b14029f62cc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_957b71aff564b2d925ddd8da77a2d587 = $(`<div id="html_957b71aff564b2d925ddd8da77a2d587" style="width: 100.0%; height: 100.0%;">上海师范大学徐汇校区<br>桂林路100号</div>`)[0];
+                popup_eae6dee7d66b7d6ee9a80b14029f62cc.setContent(html_957b71aff564b2d925ddd8da77a2d587);
+            
+        
+
+        marker_eda05ecb0adeb36e58be5b4e7be865e5.bindPopup(popup_eae6dee7d66b7d6ee9a80b14029f62cc)
+        ;
+
+        
+    
+    
+            marker_eda05ecb0adeb36e58be5b4e7be865e5.bindTooltip(
+                `<div>
+                     上海师范大学徐汇校区
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b09c027654b8ee1e0ede06f07d4c5140 = L.marker(
+                [31.161299, 121.416577],
+                {
+}
+            ).addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+        var popup_be2b05299b8ffd239acef314d40cc9e1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7e5e36a276f320adbd36897fa7be65fc = $(`<div id="html_7e5e36a276f320adbd36897fa7be65fc" style="width: 100.0%; height: 100.0%;">上海师范大学徐汇校区西部<br>桂林路100号上海师范大学徐汇校区</div>`)[0];
+                popup_be2b05299b8ffd239acef314d40cc9e1.setContent(html_7e5e36a276f320adbd36897fa7be65fc);
+            
+        
+
+        marker_b09c027654b8ee1e0ede06f07d4c5140.bindPopup(popup_be2b05299b8ffd239acef314d40cc9e1)
+        ;
+
+        
+    
+    
+            marker_b09c027654b8ee1e0ede06f07d4c5140.bindTooltip(
+                `<div>
+                     上海师范大学徐汇校区西部
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_469381314d4896b9ef6a4632bf573259 = L.marker(
+                [31.160893, 121.4218],
+                {
+}
+            ).addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+        var popup_c5edc25f1bda89663f1ca780d0cb223c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_19fb750e8630d6b419e22fd080c2e879 = $(`<div id="html_19fb750e8630d6b419e22fd080c2e879" style="width: 100.0%; height: 100.0%;">上海师范大学徐汇校区东部<br>桂林路100号上海师范大学徐汇校区</div>`)[0];
+                popup_c5edc25f1bda89663f1ca780d0cb223c.setContent(html_19fb750e8630d6b419e22fd080c2e879);
+            
+        
+
+        marker_469381314d4896b9ef6a4632bf573259.bindPopup(popup_c5edc25f1bda89663f1ca780d0cb223c)
+        ;
+
+        
+    
+    
+            marker_469381314d4896b9ef6a4632bf573259.bindTooltip(
+                `<div>
+                     上海师范大学徐汇校区东部
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5241b2a43e2e580cdacf6a6e08d064b2 = L.marker(
+                [31.143492, 121.424696],
+                {
+}
+            ).addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+        var popup_b2dfbe890de1e6e43f28890248dabc02 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a97f08754af2abf509aec3ba2e8075fd = $(`<div id="html_a97f08754af2abf509aec3ba2e8075fd" style="width: 100.0%; height: 100.0%;">华东理工大学徐汇校区<br>梅陇路130号</div>`)[0];
+                popup_b2dfbe890de1e6e43f28890248dabc02.setContent(html_a97f08754af2abf509aec3ba2e8075fd);
+            
+        
+
+        marker_5241b2a43e2e580cdacf6a6e08d064b2.bindPopup(popup_b2dfbe890de1e6e43f28890248dabc02)
+        ;
+
+        
+    
+    
+            marker_5241b2a43e2e580cdacf6a6e08d064b2.bindTooltip(
+                `<div>
+                     华东理工大学徐汇校区
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8272c5649be4910689e21381074b6093 = L.marker(
+                [31.33654, 121.506217],
+                {
+}
+            ).addTo(map_36354c9aae11d1bef1d135e16fe48aeb);
+        
+    
+        var popup_48050ed5e42c8bd461b74aee87ff18a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_417f88740c48ad27b7b437805bdf64b0 = $(`<div id="html_417f88740c48ad27b7b437805bdf64b0" style="width: 100.0%; height: 100.0%;">复旦大学江湾校区<br>新江湾城街道淞沪路2005号</div>`)[0];
+                popup_48050ed5e42c8bd461b74aee87ff18a3.setContent(html_417f88740c48ad27b7b437805bdf64b0);
+            
+        
+
+        marker_8272c5649be4910689e21381074b6093.bindPopup(popup_48050ed5e42c8bd461b74aee87ff18a3)
+        ;
+
+        
+    
+    
+            marker_8272c5649be4910689e21381074b6093.bindTooltip(
+                `<div>
+                     复旦大学江湾校区
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

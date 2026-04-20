@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2578341a84299765d1968c0b1cc69593 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_2578341a84299765d1968c0b1cc69593" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2578341a84299765d1968c0b1cc69593 = L.map(
+                "map_2578341a84299765d1968c0b1cc69593",
+                {
+                    center: [30.588437, 114.297693],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ea2d44ebc991d5b482b33448aadb6f70 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ea2d44ebc991d5b482b33448aadb6f70.addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+            var marker_8f561a32ea36885397b983f02f84ebbe = L.marker(
+                [30.588437, 114.297693],
+                {
+}
+            ).addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+        var popup_b1ac186f4f8fa3cce3cc00e242ac5879 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_abefe65d498a240bfede5bdf996abba0 = $(`<div id="html_abefe65d498a240bfede5bdf996abba0" style="width: 100.0%; height: 100.0%;">武汉市中医医院汉口院区<br>黎黄陂路49号</div>`)[0];
+                popup_b1ac186f4f8fa3cce3cc00e242ac5879.setContent(html_abefe65d498a240bfede5bdf996abba0);
+            
+        
+
+        marker_8f561a32ea36885397b983f02f84ebbe.bindPopup(popup_b1ac186f4f8fa3cce3cc00e242ac5879)
+        ;
+
+        
+    
+    
+            marker_8f561a32ea36885397b983f02f84ebbe.bindTooltip(
+                `<div>
+                     武汉市中医医院汉口院区
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6171d1b0ddd8640947e0fba1e3041c13 = L.marker(
+                [30.600072, 114.290406],
+                {
+}
+            ).addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+        var popup_5e8e188305c9094b5a00fdc331cb725f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e07d478ef0737f6fc7145026a1faafac = $(`<div id="html_e07d478ef0737f6fc7145026a1faafac" style="width: 100.0%; height: 100.0%;">武汉市第六医院<br>香港路168号</div>`)[0];
+                popup_5e8e188305c9094b5a00fdc331cb725f.setContent(html_e07d478ef0737f6fc7145026a1faafac);
+            
+        
+
+        marker_6171d1b0ddd8640947e0fba1e3041c13.bindPopup(popup_5e8e188305c9094b5a00fdc331cb725f)
+        ;
+
+        
+    
+    
+            marker_6171d1b0ddd8640947e0fba1e3041c13.bindTooltip(
+                `<div>
+                     武汉市第六医院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_549d9bf4d63385c0660ea999cfa9f174 = L.marker(
+                [30.580973, 114.294898],
+                {
+}
+            ).addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+        var popup_f29c0109d1323667b30e4d924633e326 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7bdf79e6437875cc03241656a2030272 = $(`<div id="html_7bdf79e6437875cc03241656a2030272" style="width: 100.0%; height: 100.0%;">武汉市中心医院南京路院区<br>胜利街26号</div>`)[0];
+                popup_f29c0109d1323667b30e4d924633e326.setContent(html_7bdf79e6437875cc03241656a2030272);
+            
+        
+
+        marker_549d9bf4d63385c0660ea999cfa9f174.bindPopup(popup_f29c0109d1323667b30e4d924633e326)
+        ;
+
+        
+    
+    
+            marker_549d9bf4d63385c0660ea999cfa9f174.bindTooltip(
+                `<div>
+                     武汉市中心医院南京路院区
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_02e23772e64001b17e4ae5339f583948 = L.marker(
+                [30.606466, 114.287248],
+                {
+}
+            ).addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+        var popup_b144a66c77e5b33d88a90395a5b7b642 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b04e14fa9dd276916f554ebf23ae067d = $(`<div id="html_b04e14fa9dd276916f554ebf23ae067d" style="width: 100.0%; height: 100.0%;">长江航运总医院<br>惠济路5号</div>`)[0];
+                popup_b144a66c77e5b33d88a90395a5b7b642.setContent(html_b04e14fa9dd276916f554ebf23ae067d);
+            
+        
+
+        marker_02e23772e64001b17e4ae5339f583948.bindPopup(popup_b144a66c77e5b33d88a90395a5b7b642)
+        ;
+
+        
+    
+    
+            marker_02e23772e64001b17e4ae5339f583948.bindTooltip(
+                `<div>
+                     长江航运总医院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7cfffe6be41b950f2abb4460c9b1c9fe = L.marker(
+                [30.584057, 114.274723],
+                {
+}
+            ).addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+        var popup_ce87399b7bd7e6b60fbc339e1ef4f86b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61785da24c46b69b4e38b95754712b40 = $(`<div id="html_61785da24c46b69b4e38b95754712b40" style="width: 100.0%; height: 100.0%;">华中科技大学同济医学院附属协和医院主院区<br>解放大道1277号</div>`)[0];
+                popup_ce87399b7bd7e6b60fbc339e1ef4f86b.setContent(html_61785da24c46b69b4e38b95754712b40);
+            
+        
+
+        marker_7cfffe6be41b950f2abb4460c9b1c9fe.bindPopup(popup_ce87399b7bd7e6b60fbc339e1ef4f86b)
+        ;
+
+        
+    
+    
+            marker_7cfffe6be41b950f2abb4460c9b1c9fe.bindTooltip(
+                `<div>
+                     华中科技大学同济医学院附属协和医院主院区
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_458309dd1a5cbf34b209b09cc6bdccbf = L.marker(
+                [30.590809, 114.295855],
+                {
+}
+            ).addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+        var popup_6671759817fc50b143bfbd2975cd8d40 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_04f6176e6bc8c4f262a58a0707163042 = $(`<div id="html_04f6176e6bc8c4f262a58a0707163042" style="width: 100.0%; height: 100.0%;">武汉市第八医院(南院区)<br>友益街18号(近常青广场好又多超市)</div>`)[0];
+                popup_6671759817fc50b143bfbd2975cd8d40.setContent(html_04f6176e6bc8c4f262a58a0707163042);
+            
+        
+
+        marker_458309dd1a5cbf34b209b09cc6bdccbf.bindPopup(popup_6671759817fc50b143bfbd2975cd8d40)
+        ;
+
+        
+    
+    
+            marker_458309dd1a5cbf34b209b09cc6bdccbf.bindTooltip(
+                `<div>
+                     武汉市第八医院(南院区)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fdd6ceaf88984aeeacf4c5893cb64e71 = L.marker(
+                [30.615921, 114.308772],
+                {
+}
+            ).addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+        var popup_e20b345a9dbbaf53d24a940a09305d0f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6eef64fe8fada75cb66f302eb7728ea2 = $(`<div id="html_6eef64fe8fada75cb66f302eb7728ea2" style="width: 100.0%; height: 100.0%;">中部战区总医院(汉口院区)<br>黄浦大街68号</div>`)[0];
+                popup_e20b345a9dbbaf53d24a940a09305d0f.setContent(html_6eef64fe8fada75cb66f302eb7728ea2);
+            
+        
+
+        marker_fdd6ceaf88984aeeacf4c5893cb64e71.bindPopup(popup_e20b345a9dbbaf53d24a940a09305d0f)
+        ;
+
+        
+    
+    
+            marker_fdd6ceaf88984aeeacf4c5893cb64e71.bindTooltip(
+                `<div>
+                     中部战区总医院(汉口院区)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fbffb6416e5b495d26f8ab12297a6f08 = L.marker(
+                [30.580945, 114.328288],
+                {
+}
+            ).addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+        var popup_b85722723f004797eee1dec0b22c9996 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_50ac323e72b6a49dab4ce5913b8e4122 = $(`<div id="html_50ac323e72b6a49dab4ce5913b8e4122" style="width: 100.0%; height: 100.0%;">武汉科技大学附属紫荆医院<br>和平大道820号(三角路地铁站A口步行290米)</div>`)[0];
+                popup_b85722723f004797eee1dec0b22c9996.setContent(html_50ac323e72b6a49dab4ce5913b8e4122);
+            
+        
+
+        marker_fbffb6416e5b495d26f8ab12297a6f08.bindPopup(popup_b85722723f004797eee1dec0b22c9996)
+        ;
+
+        
+    
+    
+            marker_fbffb6416e5b495d26f8ab12297a6f08.bindTooltip(
+                `<div>
+                     武汉科技大学附属紫荆医院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1c7d2eac8e2f857fff272d8fdf8efb89 = L.marker(
+                [30.589685, 114.280497],
+                {
+}
+            ).addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+        var popup_f8dffee385d07aadde0f19d07475144f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d76368a4a3f9e493981e2f26344cf7a6 = $(`<div id="html_d76368a4a3f9e493981e2f26344cf7a6" style="width: 100.0%; height: 100.0%;">武汉市职业病防治院<br>江汉北路22号</div>`)[0];
+                popup_f8dffee385d07aadde0f19d07475144f.setContent(html_d76368a4a3f9e493981e2f26344cf7a6);
+            
+        
+
+        marker_1c7d2eac8e2f857fff272d8fdf8efb89.bindPopup(popup_f8dffee385d07aadde0f19d07475144f)
+        ;
+
+        
+    
+    
+            marker_1c7d2eac8e2f857fff272d8fdf8efb89.bindTooltip(
+                `<div>
+                     武汉市职业病防治院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cf0d4ea50e805acb77905602f8b962c5 = L.marker(
+                [30.589454, 114.333873],
+                {
+}
+            ).addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+        var popup_fc2d8b5a536ba8d58e6aa3878b4cf148 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cd53054cb223b9b4c1a64411568e4991 = $(`<div id="html_cd53054cb223b9b4c1a64411568e4991" style="width: 100.0%; height: 100.0%;">武汉市第七医院<br>和平大道910号</div>`)[0];
+                popup_fc2d8b5a536ba8d58e6aa3878b4cf148.setContent(html_cd53054cb223b9b4c1a64411568e4991);
+            
+        
+
+        marker_cf0d4ea50e805acb77905602f8b962c5.bindPopup(popup_fc2d8b5a536ba8d58e6aa3878b4cf148)
+        ;
+
+        
+    
+    
+            marker_cf0d4ea50e805acb77905602f8b962c5.bindTooltip(
+                `<div>
+                     武汉市第七医院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b19b72872421b8d38c032e213a540bd8 = L.marker(
+                [30.607742, 114.273475],
+                {
+}
+            ).addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+        var popup_bab2b0ee15c17bcc60faeb5bcd694f28 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_747aa2182b4cf9275569bea3223a9af8 = $(`<div id="html_747aa2182b4cf9275569bea3223a9af8" style="width: 100.0%; height: 100.0%;">湖北省中西医结合医院北湖总院<br>菱角湖路11号(三眼桥地铁站C口步行320米)</div>`)[0];
+                popup_bab2b0ee15c17bcc60faeb5bcd694f28.setContent(html_747aa2182b4cf9275569bea3223a9af8);
+            
+        
+
+        marker_b19b72872421b8d38c032e213a540bd8.bindPopup(popup_bab2b0ee15c17bcc60faeb5bcd694f28)
+        ;
+
+        
+    
+    
+            marker_b19b72872421b8d38c032e213a540bd8.bindTooltip(
+                `<div>
+                     湖北省中西医结合医院北湖总院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f9d479db2e58264d4c409489df3acaef = L.marker(
+                [30.621422, 114.305051],
+                {
+}
+            ).addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+        var popup_b54eb2e69b1065fdfc5e176b4dc0977b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_60d145543bf493ba9ba181a20ef93d69 = $(`<div id="html_60d145543bf493ba9ba181a20ef93d69" style="width: 100.0%; height: 100.0%;">中国人民解放军空降兵部队医院<br>工农兵路15号(罗家庄地铁站A口步行80米)</div>`)[0];
+                popup_b54eb2e69b1065fdfc5e176b4dc0977b.setContent(html_60d145543bf493ba9ba181a20ef93d69);
+            
+        
+
+        marker_f9d479db2e58264d4c409489df3acaef.bindPopup(popup_b54eb2e69b1065fdfc5e176b4dc0977b)
+        ;
+
+        
+    
+    
+            marker_f9d479db2e58264d4c409489df3acaef.bindTooltip(
+                `<div>
+                     中国人民解放军空降兵部队医院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7c4231d5e094e05dce9dd308ea67000c = L.marker(
+                [30.597185, 114.290114],
+                {
+}
+            ).addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+        var popup_1fc04c885cffaea000154cfaeda2b5f7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8fdf2c5aef1820a9d1de27db1fbab665 = $(`<div id="html_8fdf2c5aef1820a9d1de27db1fbab665" style="width: 100.0%; height: 100.0%;">武汉金药堂中医院<br>开源大厦1-3层(苗栗路地铁站D口步行170米)</div>`)[0];
+                popup_1fc04c885cffaea000154cfaeda2b5f7.setContent(html_8fdf2c5aef1820a9d1de27db1fbab665);
+            
+        
+
+        marker_7c4231d5e094e05dce9dd308ea67000c.bindPopup(popup_1fc04c885cffaea000154cfaeda2b5f7)
+        ;
+
+        
+    
+    
+            marker_7c4231d5e094e05dce9dd308ea67000c.bindTooltip(
+                `<div>
+                     武汉金药堂中医院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ab528e339a3ca77644afefda61d0af2d = L.marker(
+                [30.599096, 114.295521],
+                {
+}
+            ).addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+        var popup_227ef0fcd1ad28ce0f96c4b008152d38 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_80f274992c94a7dd821994bb83b4bf7a = $(`<div id="html_80f274992c94a7dd821994bb83b4bf7a" style="width: 100.0%; height: 100.0%;">武汉市江岸区劳动街社区卫生服务中心(门诊部)<br>解放大道1707号附120号</div>`)[0];
+                popup_227ef0fcd1ad28ce0f96c4b008152d38.setContent(html_80f274992c94a7dd821994bb83b4bf7a);
+            
+        
+
+        marker_ab528e339a3ca77644afefda61d0af2d.bindPopup(popup_227ef0fcd1ad28ce0f96c4b008152d38)
+        ;
+
+        
+    
+    
+            marker_ab528e339a3ca77644afefda61d0af2d.bindTooltip(
+                `<div>
+                     武汉市江岸区劳动街社区卫生服务中心(门诊部)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b3c9a063eb3dff4174ec86a2653ba09d = L.marker(
+                [30.573735, 114.294197],
+                {
+}
+            ).addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+        var popup_cfbc2663d3110b91f0911b920cd191d8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d9e095d82c58089c85e2b9ffbd9d2909 = $(`<div id="html_d9e095d82c58089c85e2b9ffbd9d2909" style="width: 100.0%; height: 100.0%;">江汉中西医结合医院<br>黄陂街93号</div>`)[0];
+                popup_cfbc2663d3110b91f0911b920cd191d8.setContent(html_d9e095d82c58089c85e2b9ffbd9d2909);
+            
+        
+
+        marker_b3c9a063eb3dff4174ec86a2653ba09d.bindPopup(popup_cfbc2663d3110b91f0911b920cd191d8)
+        ;
+
+        
+    
+    
+            marker_b3c9a063eb3dff4174ec86a2653ba09d.bindTooltip(
+                `<div>
+                     江汉中西医结合医院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d81c4218c29ed20c63e45c11ecb74536 = L.marker(
+                [30.572202, 114.272247],
+                {
+}
+            ).addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+        var popup_6af26d6eeb791add7408ddc3708fd84b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e1899359406be44150c3b254d2020189 = $(`<div id="html_e1899359406be44150c3b254d2020189" style="width: 100.0%; height: 100.0%;">武汉市第一医院(利济路院区)<br>中山大道215号</div>`)[0];
+                popup_6af26d6eeb791add7408ddc3708fd84b.setContent(html_e1899359406be44150c3b254d2020189);
+            
+        
+
+        marker_d81c4218c29ed20c63e45c11ecb74536.bindPopup(popup_6af26d6eeb791add7408ddc3708fd84b)
+        ;
+
+        
+    
+    
+            marker_d81c4218c29ed20c63e45c11ecb74536.bindTooltip(
+                `<div>
+                     武汉市第一医院(利济路院区)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_80754409c88e90ddc0365a3f01fafab8 = L.marker(
+                [30.593559, 114.287107],
+                {
+}
+            ).addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+        var popup_0b282565c45b2bed2c37559dd395dc53 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a4fd3e29aa43f5f8e592faf95daa4c4a = $(`<div id="html_a4fd3e29aa43f5f8e592faf95daa4c4a" style="width: 100.0%; height: 100.0%;">江岸区西马街社区卫生服务中心<br>西马街办事处高雄路特1号财苑大楼</div>`)[0];
+                popup_0b282565c45b2bed2c37559dd395dc53.setContent(html_a4fd3e29aa43f5f8e592faf95daa4c4a);
+            
+        
+
+        marker_80754409c88e90ddc0365a3f01fafab8.bindPopup(popup_0b282565c45b2bed2c37559dd395dc53)
+        ;
+
+        
+    
+    
+            marker_80754409c88e90ddc0365a3f01fafab8.bindTooltip(
+                `<div>
+                     江岸区西马街社区卫生服务中心
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_44e4674eb00d2449d1ee3b0476a62a56 = L.marker(
+                [30.567727, 114.312561],
+                {
+}
+            ).addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+        var popup_0df471f775d0539e94648600cf78a674 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5954dc640ad234c1430241254b6783b7 = $(`<div id="html_5954dc640ad234c1430241254b6783b7" style="width: 100.0%; height: 100.0%;">北斗星儿童医院<br>积玉桥和平大道219号(武汉工人文化宫斜对面)</div>`)[0];
+                popup_0df471f775d0539e94648600cf78a674.setContent(html_5954dc640ad234c1430241254b6783b7);
+            
+        
+
+        marker_44e4674eb00d2449d1ee3b0476a62a56.bindPopup(popup_0df471f775d0539e94648600cf78a674)
+        ;
+
+        
+    
+    
+            marker_44e4674eb00d2449d1ee3b0476a62a56.bindTooltip(
+                `<div>
+                     北斗星儿童医院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_27829563d69bdba5b820cf98da0630c9 = L.marker(
+                [30.584734, 114.288592],
+                {
+}
+            ).addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+        var popup_036a17b3c17dcafc3c5a2e975de7ebbd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_18dd8089302ab9221cb05a04ac8b281e = $(`<div id="html_18dd8089302ab9221cb05a04ac8b281e" style="width: 100.0%; height: 100.0%;">江岸区大智街北社区卫生服务中心<br>保成路118号(循礼门地铁站H口步行120米)</div>`)[0];
+                popup_036a17b3c17dcafc3c5a2e975de7ebbd.setContent(html_18dd8089302ab9221cb05a04ac8b281e);
+            
+        
+
+        marker_27829563d69bdba5b820cf98da0630c9.bindPopup(popup_036a17b3c17dcafc3c5a2e975de7ebbd)
+        ;
+
+        
+    
+    
+            marker_27829563d69bdba5b820cf98da0630c9.bindTooltip(
+                `<div>
+                     江岸区大智街北社区卫生服务中心
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8603efe9f8c0a7bfd8397c2f5b6f43cf = L.marker(
+                [30.596727, 114.281215],
+                {
+}
+            ).addTo(map_2578341a84299765d1968c0b1cc69593);
+        
+    
+        var popup_348cad46315a4c644c58057bb4a770a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd1f6cc2910dcb77f0745fe91c9c641f = $(`<div id="html_fd1f6cc2910dcb77f0745fe91c9c641f" style="width: 100.0%; height: 100.0%;">武汉市中医医院台北院区<br>台北路128号(取水楼地铁站出入口步行370米)</div>`)[0];
+                popup_348cad46315a4c644c58057bb4a770a9.setContent(html_fd1f6cc2910dcb77f0745fe91c9c641f);
+            
+        
+
+        marker_8603efe9f8c0a7bfd8397c2f5b6f43cf.bindPopup(popup_348cad46315a4c644c58057bb4a770a9)
+        ;
+
+        
+    
+    
+            marker_8603efe9f8c0a7bfd8397c2f5b6f43cf.bindTooltip(
+                `<div>
+                     武汉市中医医院台北院区
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
