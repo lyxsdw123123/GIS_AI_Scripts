@@ -103,6 +103,7 @@ def main():
 
     print(f"📍 城市：{city}")
     print(f"📌 类别：{keyword}")
+    print(f"city={city}, keyword={keyword}")
 
     pois = get_poi(city, keyword)
 

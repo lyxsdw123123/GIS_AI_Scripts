@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3f9718dfdde8b112333e7a3ce8d94463 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3f9718dfdde8b112333e7a3ce8d94463" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3f9718dfdde8b112333e7a3ce8d94463 = L.map(
+                "map_3f9718dfdde8b112333e7a3ce8d94463",
+                {
+                    center: [28.220483, 112.944798],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c5e18966c9cd9869d19bf47342637fc6 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c5e18966c9cd9869d19bf47342637fc6.addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+            var marker_b4c01d2151e14c6f635ac9723f22d802 = L.marker(
+                [28.220483, 112.944798],
+                {
+}
+            ).addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+        var popup_17b375c1b5ebe3588900707e4b99cb69 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c57869a028b567d5f2777f33c509a85 = $(`<div id="html_5c57869a028b567d5f2777f33c509a85" style="width: 100.0%; height: 100.0%;">中南大学湘雅三医院<br>桐梓坡路138号</div>`)[0];
+                popup_17b375c1b5ebe3588900707e4b99cb69.setContent(html_5c57869a028b567d5f2777f33c509a85);
+            
+        
+
+        marker_b4c01d2151e14c6f635ac9723f22d802.bindPopup(popup_17b375c1b5ebe3588900707e4b99cb69)
+        ;
+
+        
+    
+    
+            marker_b4c01d2151e14c6f635ac9723f22d802.bindTooltip(
+                `<div>
+                     中南大学湘雅三医院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_98150538aeda764292e18acc9b3e40b3 = L.marker(
+                [28.229844, 112.957685],
+                {
+}
+            ).addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+        var popup_be1b04f3c399c122946a34195dcfaf7e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d9ec27ea92670f38a31f1d8176acd0dd = $(`<div id="html_d9ec27ea92670f38a31f1d8176acd0dd" style="width: 100.0%; height: 100.0%;">长沙裕湘医院<br>观沙岭街道岳北路与边洲围路交汇处</div>`)[0];
+                popup_be1b04f3c399c122946a34195dcfaf7e.setContent(html_d9ec27ea92670f38a31f1d8176acd0dd);
+            
+        
+
+        marker_98150538aeda764292e18acc9b3e40b3.bindPopup(popup_be1b04f3c399c122946a34195dcfaf7e)
+        ;
+
+        
+    
+    
+            marker_98150538aeda764292e18acc9b3e40b3.bindTooltip(
+                `<div>
+                     长沙裕湘医院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e4fd3cf193ec5403557d190b95ccf252 = L.marker(
+                [28.209206, 112.934427],
+                {
+}
+            ).addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+        var popup_15a3a6196fffd62a9453f32121eca200 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_339554183bb15567f8dbc36d469edd14 = $(`<div id="html_339554183bb15567f8dbc36d469edd14" style="width: 100.0%; height: 100.0%;">湖南省胸科医院<br>咸嘉湖路519号</div>`)[0];
+                popup_15a3a6196fffd62a9453f32121eca200.setContent(html_339554183bb15567f8dbc36d469edd14);
+            
+        
+
+        marker_e4fd3cf193ec5403557d190b95ccf252.bindPopup(popup_15a3a6196fffd62a9453f32121eca200)
+        ;
+
+        
+    
+    
+            marker_e4fd3cf193ec5403557d190b95ccf252.bindTooltip(
+                `<div>
+                     湖南省胸科医院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_083340a7ae55b021da39bcd2bd272307 = L.marker(
+                [28.234746, 112.951483],
+                {
+}
+            ).addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+        var popup_9c1c5f0f4fc1e9b2630f750ee55b4f05 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_50f80e2c88f1edf985ce2905d8542ae2 = $(`<div id="html_50f80e2c88f1edf985ce2905d8542ae2" style="width: 100.0%; height: 100.0%;">长沙市岳麓区观沙岭街道社区卫生服务中心石岭塘院区<br>银杉路327号(观沙岭地铁站4号口步行440米)</div>`)[0];
+                popup_9c1c5f0f4fc1e9b2630f750ee55b4f05.setContent(html_50f80e2c88f1edf985ce2905d8542ae2);
+            
+        
+
+        marker_083340a7ae55b021da39bcd2bd272307.bindPopup(popup_9c1c5f0f4fc1e9b2630f750ee55b4f05)
+        ;
+
+        
+    
+    
+            marker_083340a7ae55b021da39bcd2bd272307.bindTooltip(
+                `<div>
+                     长沙市岳麓区观沙岭街道社区卫生服务中心石岭塘院区
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6bbfbc04b8cd9c2be7b3debb2caafaf7 = L.marker(
+                [28.21956, 112.952226],
+                {
+}
+            ).addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+        var popup_259876921f4ddfa6222787ff02125bda = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_876bda3b65a2bb80328f0cfe015b33ea = $(`<div id="html_876bda3b65a2bb80328f0cfe015b33ea" style="width: 100.0%; height: 100.0%;">长沙红枫康复医院<br>桐梓坡路26号(地铁4、6号线六沟垅站9A口步行100米)</div>`)[0];
+                popup_259876921f4ddfa6222787ff02125bda.setContent(html_876bda3b65a2bb80328f0cfe015b33ea);
+            
+        
+
+        marker_6bbfbc04b8cd9c2be7b3debb2caafaf7.bindPopup(popup_259876921f4ddfa6222787ff02125bda)
+        ;
+
+        
+    
+    
+            marker_6bbfbc04b8cd9c2be7b3debb2caafaf7.bindTooltip(
+                `<div>
+                     长沙红枫康复医院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9c6ade94f065be396dd978d80a0df76b = L.marker(
+                [28.220548, 112.946272],
+                {
+}
+            ).addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+        var popup_1313e05ff94533d0f8d29c5c3f9529aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9abc41e159e4e28fca95414625c146be = $(`<div id="html_9abc41e159e4e28fca95414625c146be" style="width: 100.0%; height: 100.0%;">湖南省中医药研究院<br>岳华路142号(湘雅三医院地铁站3号口步行390米)</div>`)[0];
+                popup_1313e05ff94533d0f8d29c5c3f9529aa.setContent(html_9abc41e159e4e28fca95414625c146be);
+            
+        
+
+        marker_9c6ade94f065be396dd978d80a0df76b.bindPopup(popup_1313e05ff94533d0f8d29c5c3f9529aa)
+        ;
+
+        
+    
+    
+            marker_9c6ade94f065be396dd978d80a0df76b.bindTooltip(
+                `<div>
+                     湖南省中医药研究院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_dc1ec6d4583502383d3a55c5dff46033 = L.marker(
+                [28.245516, 112.953874],
+                {
+}
+            ).addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+        var popup_634da37cf86f36b7d58bf5a9e4879f3e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ce8be738cde37ae7bd7415fa264dfe30 = $(`<div id="html_ce8be738cde37ae7bd7415fa264dfe30" style="width: 100.0%; height: 100.0%;">长沙同欣医院<br>茶山馨苑11栋</div>`)[0];
+                popup_634da37cf86f36b7d58bf5a9e4879f3e.setContent(html_ce8be738cde37ae7bd7415fa264dfe30);
+            
+        
+
+        marker_dc1ec6d4583502383d3a55c5dff46033.bindPopup(popup_634da37cf86f36b7d58bf5a9e4879f3e)
+        ;
+
+        
+    
+    
+            marker_dc1ec6d4583502383d3a55c5dff46033.bindTooltip(
+                `<div>
+                     长沙同欣医院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7efb5ab37a2a3a3feb67c4561544a38d = L.marker(
+                [28.232006, 112.924607],
+                {
+}
+            ).addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+        var popup_3170f5f90115f3dde726851d2c77deee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_58116a8aac6d9312c84a7b35189e5ca5 = $(`<div id="html_58116a8aac6d9312c84a7b35189e5ca5" style="width: 100.0%; height: 100.0%;">望岳街道社区卫生服务中心<br>望岳路307号金峰小区北院</div>`)[0];
+                popup_3170f5f90115f3dde726851d2c77deee.setContent(html_58116a8aac6d9312c84a7b35189e5ca5);
+            
+        
+
+        marker_7efb5ab37a2a3a3feb67c4561544a38d.bindPopup(popup_3170f5f90115f3dde726851d2c77deee)
+        ;
+
+        
+    
+    
+            marker_7efb5ab37a2a3a3feb67c4561544a38d.bindTooltip(
+                `<div>
+                     望岳街道社区卫生服务中心
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7a3a80f76edc4b08ce91ec4a1f1866de = L.marker(
+                [28.226541, 112.957685],
+                {
+}
+            ).addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+        var popup_d09e37d0c189cd507b62c24185ac79ce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0d67bcdbe8e3b51baa7654f4c19bd5f5 = $(`<div id="html_0d67bcdbe8e3b51baa7654f4c19bd5f5" style="width: 100.0%; height: 100.0%;">湖南红杏林中医门诊部<br>银盆岭街道北大桥桥西金湘大厦601号</div>`)[0];
+                popup_d09e37d0c189cd507b62c24185ac79ce.setContent(html_0d67bcdbe8e3b51baa7654f4c19bd5f5);
+            
+        
+
+        marker_7a3a80f76edc4b08ce91ec4a1f1866de.bindPopup(popup_d09e37d0c189cd507b62c24185ac79ce)
+        ;
+
+        
+    
+    
+            marker_7a3a80f76edc4b08ce91ec4a1f1866de.bindTooltip(
+                `<div>
+                     湖南红杏林中医门诊部
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_65b363c8fc659f6accfe46d5a8ced279 = L.marker(
+                [28.214737, 112.929952],
+                {
+}
+            ).addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+        var popup_99d61170fdcfbb3cfa1dd47d479b661e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc6052d53727c8b7920e3bc9f36858af = $(`<div id="html_dc6052d53727c8b7920e3bc9f36858af" style="width: 100.0%; height: 100.0%;">咸嘉湖社区卫生服务中心<br>金星中路59号公园里1栋1层</div>`)[0];
+                popup_99d61170fdcfbb3cfa1dd47d479b661e.setContent(html_dc6052d53727c8b7920e3bc9f36858af);
+            
+        
+
+        marker_65b363c8fc659f6accfe46d5a8ced279.bindPopup(popup_99d61170fdcfbb3cfa1dd47d479b661e)
+        ;
+
+        
+    
+    
+            marker_65b363c8fc659f6accfe46d5a8ced279.bindTooltip(
+                `<div>
+                     咸嘉湖社区卫生服务中心
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7656145250b750fc334920d916e868c7 = L.marker(
+                [28.231165, 112.957044],
+                {
+}
+            ).addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+        var popup_4fc5f951194c7fa8d13ecd0f3657ee56 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aada11888faab2b5fb403cd1655dcc88 = $(`<div id="html_aada11888faab2b5fb403cd1655dcc88" style="width: 100.0%; height: 100.0%;">长沙普惠中医康复医院<br>观沙岭街道岳北社区综合楼A1栋</div>`)[0];
+                popup_4fc5f951194c7fa8d13ecd0f3657ee56.setContent(html_aada11888faab2b5fb403cd1655dcc88);
+            
+        
+
+        marker_7656145250b750fc334920d916e868c7.bindPopup(popup_4fc5f951194c7fa8d13ecd0f3657ee56)
+        ;
+
+        
+    
+    
+            marker_7656145250b750fc334920d916e868c7.bindTooltip(
+                `<div>
+                     长沙普惠中医康复医院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_632516fbb03fb0f25f8d0a299099f616 = L.marker(
+                [28.209387, 112.924181],
+                {
+}
+            ).addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+        var popup_ed94573bc95f1aa43efd56e864c6422e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d5d4d28ac6c4a5f09e93598871a7f9ae = $(`<div id="html_d5d4d28ac6c4a5f09e93598871a7f9ae" style="width: 100.0%; height: 100.0%;">湖湘中医肿瘤医院<br>枫林二路220号(省财专西行100米)</div>`)[0];
+                popup_ed94573bc95f1aa43efd56e864c6422e.setContent(html_d5d4d28ac6c4a5f09e93598871a7f9ae);
+            
+        
+
+        marker_632516fbb03fb0f25f8d0a299099f616.bindPopup(popup_ed94573bc95f1aa43efd56e864c6422e)
+        ;
+
+        
+    
+    
+            marker_632516fbb03fb0f25f8d0a299099f616.bindTooltip(
+                `<div>
+                     湖湘中医肿瘤医院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0fc88277f9bf905041bea38cbc20e07e = L.marker(
+                [28.201739, 112.94821],
+                {
+}
+            ).addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+        var popup_5886dd23bf728670f4b229ac4a07c3d3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb95c3c16b978da397cf44aac4d78b92 = $(`<div id="html_cb95c3c16b978da397cf44aac4d78b92" style="width: 100.0%; height: 100.0%;">武警湖南总队医院<br>枫林一路222号</div>`)[0];
+                popup_5886dd23bf728670f4b229ac4a07c3d3.setContent(html_cb95c3c16b978da397cf44aac4d78b92);
+            
+        
+
+        marker_0fc88277f9bf905041bea38cbc20e07e.bindPopup(popup_5886dd23bf728670f4b229ac4a07c3d3)
+        ;
+
+        
+    
+    
+            marker_0fc88277f9bf905041bea38cbc20e07e.bindTooltip(
+                `<div>
+                     武警湖南总队医院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1e9f80354ae2c2c5d2ac34233c1e971e = L.marker(
+                [28.213274, 112.939997],
+                {
+}
+            ).addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+        var popup_f31006ee52b723dc5a7a9afaa140cdcb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e2986023e4c1e30ddc50b9a87c26e242 = $(`<div id="html_e2986023e4c1e30ddc50b9a87c26e242" style="width: 100.0%; height: 100.0%;">长沙睦邻康复医院<br>咸嘉湖496号熊家湾安置小区8栋</div>`)[0];
+                popup_f31006ee52b723dc5a7a9afaa140cdcb.setContent(html_e2986023e4c1e30ddc50b9a87c26e242);
+            
+        
+
+        marker_1e9f80354ae2c2c5d2ac34233c1e971e.bindPopup(popup_f31006ee52b723dc5a7a9afaa140cdcb)
+        ;
+
+        
+    
+    
+            marker_1e9f80354ae2c2c5d2ac34233c1e971e.bindTooltip(
+                `<div>
+                     长沙睦邻康复医院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4b2010ecdb9bbc4de99ea43590e274d4 = L.marker(
+                [28.254652, 112.943792],
+                {
+}
+            ).addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+        var popup_d723e714b085ec3306dd1a14d7186211 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2047a2d2aaf885ba4035d9d0e20848cc = $(`<div id="html_2047a2d2aaf885ba4035d9d0e20848cc" style="width: 100.0%; height: 100.0%;">观沙岭街道社区卫生服务中心<br>谷山乐园3期西门南130米</div>`)[0];
+                popup_d723e714b085ec3306dd1a14d7186211.setContent(html_2047a2d2aaf885ba4035d9d0e20848cc);
+            
+        
+
+        marker_4b2010ecdb9bbc4de99ea43590e274d4.bindPopup(popup_d723e714b085ec3306dd1a14d7186211)
+        ;
+
+        
+    
+    
+            marker_4b2010ecdb9bbc4de99ea43590e274d4.bindTooltip(
+                `<div>
+                     观沙岭街道社区卫生服务中心
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0f463c0ba1754c1142593c7db32fab05 = L.marker(
+                [28.195449, 112.949316],
+                {
+}
+            ).addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+        var popup_bf3f3c8c8b54dd17a4d39aa4e0dcfb49 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20162ff8ce04b6e3bf084a0cb400b18e = $(`<div id="html_20162ff8ce04b6e3bf084a0cb400b18e" style="width: 100.0%; height: 100.0%;">湖南省中西医结合医院<br>麓山路58号</div>`)[0];
+                popup_bf3f3c8c8b54dd17a4d39aa4e0dcfb49.setContent(html_20162ff8ce04b6e3bf084a0cb400b18e);
+            
+        
+
+        marker_0f463c0ba1754c1142593c7db32fab05.bindPopup(popup_bf3f3c8c8b54dd17a4d39aa4e0dcfb49)
+        ;
+
+        
+    
+    
+            marker_0f463c0ba1754c1142593c7db32fab05.bindTooltip(
+                `<div>
+                     湖南省中西医结合医院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8b6ac0d53bd68d6d552edca2a0e28f14 = L.marker(
+                [28.221071, 112.946208],
+                {
+}
+            ).addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+        var popup_83d3313f2a90911a0f51e0219816be1f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6d05658af2076c5ea7851b48ccadaf81 = $(`<div id="html_6d05658af2076c5ea7851b48ccadaf81" style="width: 100.0%; height: 100.0%;">湖南省中医药研究院中药研究所(岳华路)<br>岳华路8号(湘雅三医院地铁站3号口步行460米)</div>`)[0];
+                popup_83d3313f2a90911a0f51e0219816be1f.setContent(html_6d05658af2076c5ea7851b48ccadaf81);
+            
+        
+
+        marker_8b6ac0d53bd68d6d552edca2a0e28f14.bindPopup(popup_83d3313f2a90911a0f51e0219816be1f)
+        ;
+
+        
+    
+    
+            marker_8b6ac0d53bd68d6d552edca2a0e28f14.bindTooltip(
+                `<div>
+                     湖南省中医药研究院中药研究所(岳华路)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7ffc59ee14c9d88b629b44d2c7d34798 = L.marker(
+                [28.224588, 112.950612],
+                {
+}
+            ).addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+        var popup_7fb97de8982436127c33f9c16feb5d91 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eb5a559f1e572e94eea88f68c7b4b0b7 = $(`<div id="html_eb5a559f1e572e94eea88f68c7b4b0b7" style="width: 100.0%; height: 100.0%;">银盆岭街道社区卫生服务中心<br>彩虹路62号</div>`)[0];
+                popup_7fb97de8982436127c33f9c16feb5d91.setContent(html_eb5a559f1e572e94eea88f68c7b4b0b7);
+            
+        
+
+        marker_7ffc59ee14c9d88b629b44d2c7d34798.bindPopup(popup_7fb97de8982436127c33f9c16feb5d91)
+        ;
+
+        
+    
+    
+            marker_7ffc59ee14c9d88b629b44d2c7d34798.bindTooltip(
+                `<div>
+                     银盆岭街道社区卫生服务中心
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1fd3276c080154178b2aed3b7ebabb7f = L.marker(
+                [28.211524, 112.937773],
+                {
+}
+            ).addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+        var popup_94c9c46110ca5ab2acf7ce8d5234765b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_367625492682f24e11579c2270eba4d4 = $(`<div id="html_367625492682f24e11579c2270eba4d4" style="width: 100.0%; height: 100.0%;">西湖街道社区卫生服务中心<br>咸嘉湖路</div>`)[0];
+                popup_94c9c46110ca5ab2acf7ce8d5234765b.setContent(html_367625492682f24e11579c2270eba4d4);
+            
+        
+
+        marker_1fd3276c080154178b2aed3b7ebabb7f.bindPopup(popup_94c9c46110ca5ab2acf7ce8d5234765b)
+        ;
+
+        
+    
+    
+            marker_1fd3276c080154178b2aed3b7ebabb7f.bindTooltip(
+                `<div>
+                     西湖街道社区卫生服务中心
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ab93ebb9faba394b8055afc349766f09 = L.marker(
+                [28.194231, 112.949788],
+                {
+}
+            ).addTo(map_3f9718dfdde8b112333e7a3ce8d94463);
+        
+    
+        var popup_5ad7ae63f4f99d2f43ab19fe90e099cd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61ade00f2c5faaf1ea868a8cddca83a9 = $(`<div id="html_61ade00f2c5faaf1ea868a8cddca83a9" style="width: 100.0%; height: 100.0%;">长沙市第四医院(岳麓院区)<br>麓山路70号(溁湾镇地铁站3号口步行460米)</div>`)[0];
+                popup_5ad7ae63f4f99d2f43ab19fe90e099cd.setContent(html_61ade00f2c5faaf1ea868a8cddca83a9);
+            
+        
+
+        marker_ab93ebb9faba394b8055afc349766f09.bindPopup(popup_5ad7ae63f4f99d2f43ab19fe90e099cd)
+        ;
+
+        
+    
+    
+            marker_ab93ebb9faba394b8055afc349766f09.bindTooltip(
+                `<div>
+                     长沙市第四医院(岳麓院区)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

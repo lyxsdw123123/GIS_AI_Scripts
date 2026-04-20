@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8644df6f1ed2a892d194dec57a60de3a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8644df6f1ed2a892d194dec57a60de3a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8644df6f1ed2a892d194dec57a60de3a = L.map(
+                "map_8644df6f1ed2a892d194dec57a60de3a",
+                {
+                    center: [39.992873, 116.310918],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6cf4d6888575cb0b208cf5cc30a66ba2 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_6cf4d6888575cb0b208cf5cc30a66ba2.addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+            var marker_1b1b49e88ec7270f12efc354642b5919 = L.marker(
+                [39.992873, 116.310918],
+                {
+}
+            ).addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+        var popup_8e64d30ed3555c544bbcde1066d67005 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d4a0ec7082a3991e852ddfbd30681593 = $(`<div id="html_d4a0ec7082a3991e852ddfbd30681593" style="width: 100.0%; height: 100.0%;">北京大学<br>颐和园路5号</div>`)[0];
+                popup_8e64d30ed3555c544bbcde1066d67005.setContent(html_d4a0ec7082a3991e852ddfbd30681593);
+            
+        
+
+        marker_1b1b49e88ec7270f12efc354642b5919.bindPopup(popup_8e64d30ed3555c544bbcde1066d67005)
+        ;
+
+        
+    
+    
+            marker_1b1b49e88ec7270f12efc354642b5919.bindTooltip(
+                `<div>
+                     北京大学
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d716638501363616231166865b9cacc0 = L.marker(
+                [40.003213, 116.326936],
+                {
+}
+            ).addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+        var popup_21bbaf384b65c7466462bd00feebd343 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_492272b33c4f69168cc561b3d91c0e38 = $(`<div id="html_492272b33c4f69168cc561b3d91c0e38" style="width: 100.0%; height: 100.0%;">清华大学<br>双清路30号</div>`)[0];
+                popup_21bbaf384b65c7466462bd00feebd343.setContent(html_492272b33c4f69168cc561b3d91c0e38);
+            
+        
+
+        marker_d716638501363616231166865b9cacc0.bindPopup(popup_21bbaf384b65c7466462bd00feebd343)
+        ;
+
+        
+    
+    
+            marker_d716638501363616231166865b9cacc0.bindTooltip(
+                `<div>
+                     清华大学
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c61bff32fed4ba3312b6dbc7ff65e927 = L.marker(
+                [39.961081, 116.365499],
+                {
+}
+            ).addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+        var popup_a9940a65d40f6693afb532c946f3e594 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a294ed4f7e7f237a15359093c9e24f1b = $(`<div id="html_a294ed4f7e7f237a15359093c9e24f1b" style="width: 100.0%; height: 100.0%;">北京师范大学<br>北太平庄街道新街口外大街19号</div>`)[0];
+                popup_a9940a65d40f6693afb532c946f3e594.setContent(html_a294ed4f7e7f237a15359093c9e24f1b);
+            
+        
+
+        marker_c61bff32fed4ba3312b6dbc7ff65e927.bindPopup(popup_a9940a65d40f6693afb532c946f3e594)
+        ;
+
+        
+    
+    
+            marker_c61bff32fed4ba3312b6dbc7ff65e927.bindTooltip(
+                `<div>
+                     北京师范大学
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_86c2155f19c75f4a33af5de6593b0c71 = L.marker(
+                [39.863411, 116.35285],
+                {
+}
+            ).addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+        var popup_8b1e7b80929485a58d3d2e779f946054 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d883fc49fbb44d08528f8bfecd445921 = $(`<div id="html_d883fc49fbb44d08528f8bfecd445921" style="width: 100.0%; height: 100.0%;">首都医科大学<br>右安门外西头条10号</div>`)[0];
+                popup_8b1e7b80929485a58d3d2e779f946054.setContent(html_d883fc49fbb44d08528f8bfecd445921);
+            
+        
+
+        marker_86c2155f19c75f4a33af5de6593b0c71.bindPopup(popup_8b1e7b80929485a58d3d2e779f946054)
+        ;
+
+        
+    
+    
+            marker_86c2155f19c75f4a33af5de6593b0c71.bindTooltip(
+                `<div>
+                     首都医科大学
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d3933bc4c30ee3871b495e61ed7055f3 = L.marker(
+                [39.982212, 116.347225],
+                {
+}
+            ).addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+        var popup_885fdb8e8960947edc9d435d13a223e0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a36a8106530da1c65c04eb7ba1087ebf = $(`<div id="html_a36a8106530da1c65c04eb7ba1087ebf" style="width: 100.0%; height: 100.0%;">北京航空航天大学(学院路校区)<br>学院路37号</div>`)[0];
+                popup_885fdb8e8960947edc9d435d13a223e0.setContent(html_a36a8106530da1c65c04eb7ba1087ebf);
+            
+        
+
+        marker_d3933bc4c30ee3871b495e61ed7055f3.bindPopup(popup_885fdb8e8960947edc9d435d13a223e0)
+        ;
+
+        
+    
+    
+            marker_d3933bc4c30ee3871b495e61ed7055f3.bindTooltip(
+                `<div>
+                     北京航空航天大学(学院路校区)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_59c13a30d6f18fca403a9831ec281de3 = L.marker(
+                [39.970598, 116.313226],
+                {
+}
+            ).addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+        var popup_0e1ff7a92cd969e1b2d4dbad7ce72b66 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c14472624b824b6c2038e2d654eba60 = $(`<div id="html_3c14472624b824b6c2038e2d654eba60" style="width: 100.0%; height: 100.0%;">中国人民大学中关村校区<br>中关村大街59号</div>`)[0];
+                popup_0e1ff7a92cd969e1b2d4dbad7ce72b66.setContent(html_3c14472624b824b6c2038e2d654eba60);
+            
+        
+
+        marker_59c13a30d6f18fca403a9831ec281de3.bindPopup(popup_0e1ff7a92cd969e1b2d4dbad7ce72b66)
+        ;
+
+        
+    
+    
+            marker_59c13a30d6f18fca403a9831ec281de3.bindTooltip(
+                `<div>
+                     中国人民大学中关村校区
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4cb0e73996b588e2cc703122f0100179 = L.marker(
+                [39.990384, 116.359265],
+                {
+}
+            ).addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+        var popup_f9a6cbd8119b8a81d50e4d73108d7a7e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c3a2ee43d6f7a47b716bb5aa80501e24 = $(`<div id="html_c3a2ee43d6f7a47b716bb5aa80501e24" style="width: 100.0%; height: 100.0%;">北京科技大学<br>学院路30号</div>`)[0];
+                popup_f9a6cbd8119b8a81d50e4d73108d7a7e.setContent(html_c3a2ee43d6f7a47b716bb5aa80501e24);
+            
+        
+
+        marker_4cb0e73996b588e2cc703122f0100179.bindPopup(popup_f9a6cbd8119b8a81d50e4d73108d7a7e)
+        ;
+
+        
+    
+    
+            marker_4cb0e73996b588e2cc703122f0100179.bindTooltip(
+                `<div>
+                     北京科技大学
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8154a7787dbd400991b728829444189a = L.marker(
+                [39.959984, 116.315469],
+                {
+}
+            ).addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+        var popup_d0f521bc03395cefa9b9c9958fb28944 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c14f7620788fdd98985f4346ed7b359 = $(`<div id="html_3c14f7620788fdd98985f4346ed7b359" style="width: 100.0%; height: 100.0%;">北京理工大学(中关村校区)<br>中关村南大街5号</div>`)[0];
+                popup_d0f521bc03395cefa9b9c9958fb28944.setContent(html_3c14f7620788fdd98985f4346ed7b359);
+            
+        
+
+        marker_8154a7787dbd400991b728829444189a.bindPopup(popup_d0f521bc03395cefa9b9c9958fb28944)
+        ;
+
+        
+    
+    
+            marker_8154a7787dbd400991b728829444189a.bindTooltip(
+                `<div>
+                     北京理工大学(中关村校区)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b098ecafc5e73fd2b891163e2386954a = L.marker(
+                [39.912312, 116.557391],
+                {
+}
+            ).addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+        var popup_614e83a94dcdacde0e43b6b2746638f7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7d0e7000cc6821ef8dccc5e4dc814a0d = $(`<div id="html_7d0e7000cc6821ef8dccc5e4dc814a0d" style="width: 100.0%; height: 100.0%;">中国传媒大学<br>定福庄东街1号</div>`)[0];
+                popup_614e83a94dcdacde0e43b6b2746638f7.setContent(html_7d0e7000cc6821ef8dccc5e4dc814a0d);
+            
+        
+
+        marker_b098ecafc5e73fd2b891163e2386954a.bindPopup(popup_614e83a94dcdacde0e43b6b2746638f7)
+        ;
+
+        
+    
+    
+            marker_b098ecafc5e73fd2b891163e2386954a.bindTooltip(
+                `<div>
+                     中国传媒大学
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d137aa6ad5a47e386ac67d42b8f8e3cc = L.marker(
+                [39.952311, 116.342757],
+                {
+}
+            ).addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+        var popup_e9f932c5a00eb580bf6bc1205940ab2e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_90d2050feb305e5024b1bbb6261a87ec = $(`<div id="html_90d2050feb305e5024b1bbb6261a87ec" style="width: 100.0%; height: 100.0%;">北京交通大学<br>西直门外上园村3号</div>`)[0];
+                popup_e9f932c5a00eb580bf6bc1205940ab2e.setContent(html_90d2050feb305e5024b1bbb6261a87ec);
+            
+        
+
+        marker_d137aa6ad5a47e386ac67d42b8f8e3cc.bindPopup(popup_e9f932c5a00eb580bf6bc1205940ab2e)
+        ;
+
+        
+    
+    
+            marker_d137aa6ad5a47e386ac67d42b8f8e3cc.bindTooltip(
+                `<div>
+                     北京交通大学
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_689d8a20f61d69b4731f1478d8262400 = L.marker(
+                [39.94733, 116.347222],
+                {
+}
+            ).addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+        var popup_728381e943841408b7d4aab388a1358f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e9aef9187e7af4d8fd07facfaa8ea458 = $(`<div id="html_e9aef9187e7af4d8fd07facfaa8ea458" style="width: 100.0%; height: 100.0%;">北京交通大学东校区<br>高粱桥斜街44号</div>`)[0];
+                popup_728381e943841408b7d4aab388a1358f.setContent(html_e9aef9187e7af4d8fd07facfaa8ea458);
+            
+        
+
+        marker_689d8a20f61d69b4731f1478d8262400.bindPopup(popup_728381e943841408b7d4aab388a1358f)
+        ;
+
+        
+    
+    
+            marker_689d8a20f61d69b4731f1478d8262400.bindTooltip(
+                `<div>
+                     北京交通大学东校区
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3855b7cc8ea0333ad93f3239ef8948a8 = L.marker(
+                [40.024529, 116.318746],
+                {
+}
+            ).addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+        var popup_1bcd6ac2ea9150d2409ee40d933c06f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_48a04d3f32954d57282aec10886c7371 = $(`<div id="html_48a04d3f32954d57282aec10886c7371" style="width: 100.0%; height: 100.0%;">北京体育大学<br>信息路48号</div>`)[0];
+                popup_1bcd6ac2ea9150d2409ee40d933c06f1.setContent(html_48a04d3f32954d57282aec10886c7371);
+            
+        
+
+        marker_3855b7cc8ea0333ad93f3239ef8948a8.bindPopup(popup_1bcd6ac2ea9150d2409ee40d933c06f1)
+        ;
+
+        
+    
+    
+            marker_3855b7cc8ea0333ad93f3239ef8948a8.bindTooltip(
+                `<div>
+                     北京体育大学
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f0878b1faa3d0de6c0921133563ab525 = L.marker(
+                [39.930146, 116.305766],
+                {
+}
+            ).addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+        var popup_eea20bbc7d9444e0faa4d6a068bd945f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_abe6d5d74ce7f0d35d2231c5a8abe4b1 = $(`<div id="html_abe6d5d74ce7f0d35d2231c5a8abe4b1" style="width: 100.0%; height: 100.0%;">首都师范大学<br>西三环北路105号</div>`)[0];
+                popup_eea20bbc7d9444e0faa4d6a068bd945f.setContent(html_abe6d5d74ce7f0d35d2231c5a8abe4b1);
+            
+        
+
+        marker_f0878b1faa3d0de6c0921133563ab525.bindPopup(popup_eea20bbc7d9444e0faa4d6a068bd945f)
+        ;
+
+        
+    
+    
+            marker_f0878b1faa3d0de6c0921133563ab525.bindTooltip(
+                `<div>
+                     首都师范大学
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_993543e844c085a60ef7cc39d98b1911 = L.marker(
+                [39.937585, 116.307881],
+                {
+}
+            ).addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+        var popup_ff9b40c07f5ee86d28ea62f9935c1131 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_69b05e91c016219e5cc5651ddf73cbd2 = $(`<div id="html_69b05e91c016219e5cc5651ddf73cbd2" style="width: 100.0%; height: 100.0%;">首都师范大学北一区<br>西三环北路83号</div>`)[0];
+                popup_ff9b40c07f5ee86d28ea62f9935c1131.setContent(html_69b05e91c016219e5cc5651ddf73cbd2);
+            
+        
+
+        marker_993543e844c085a60ef7cc39d98b1911.bindPopup(popup_ff9b40c07f5ee86d28ea62f9935c1131)
+        ;
+
+        
+    
+    
+            marker_993543e844c085a60ef7cc39d98b1911.bindTooltip(
+                `<div>
+                     首都师范大学北一区
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ad438b3be8f0a806a49779985c78baa0 = L.marker(
+                [39.937153, 116.311721],
+                {
+}
+            ).addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+        var popup_eb9f48d969808cb724113dca55dfd260 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e8ffb091444c074a41ae1c86c0fd4adc = $(`<div id="html_e8ffb091444c074a41ae1c86c0fd4adc" style="width: 100.0%; height: 100.0%;">首都师范大学北二院<br>西三环北路56号</div>`)[0];
+                popup_eb9f48d969808cb724113dca55dfd260.setContent(html_e8ffb091444c074a41ae1c86c0fd4adc);
+            
+        
+
+        marker_ad438b3be8f0a806a49779985c78baa0.bindPopup(popup_eb9f48d969808cb724113dca55dfd260)
+        ;
+
+        
+    
+    
+            marker_ad438b3be8f0a806a49779985c78baa0.bindTooltip(
+                `<div>
+                     首都师范大学北二院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4dae6a94e2df46244cf7da1aabc0941a = L.marker(
+                [39.98036, 116.427753],
+                {
+}
+            ).addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+        var popup_d56487df2fda533ef648f0d0f35831c5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4c30ab7399bbd6c3e0e8845ac27e5904 = $(`<div id="html_4c30ab7399bbd6c3e0e8845ac27e5904" style="width: 100.0%; height: 100.0%;">对外经济贸易大学<br>惠新东街10号</div>`)[0];
+                popup_d56487df2fda533ef648f0d0f35831c5.setContent(html_4c30ab7399bbd6c3e0e8845ac27e5904);
+            
+        
+
+        marker_4dae6a94e2df46244cf7da1aabc0941a.bindPopup(popup_d56487df2fda533ef648f0d0f35831c5)
+        ;
+
+        
+    
+    
+            marker_4dae6a94e2df46244cf7da1aabc0941a.bindTooltip(
+                `<div>
+                     对外经济贸易大学
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c995c0d22c03209f42ac497524ad22f8 = L.marker(
+                [39.87528, 116.481764],
+                {
+}
+            ).addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+        var popup_220af07855c681776050ba7a7cb2e587 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b6aef31adfd307f2e2b90f08b9a2aa15 = $(`<div id="html_b6aef31adfd307f2e2b90f08b9a2aa15" style="width: 100.0%; height: 100.0%;">北京工业大学<br>平乐园100号</div>`)[0];
+                popup_220af07855c681776050ba7a7cb2e587.setContent(html_b6aef31adfd307f2e2b90f08b9a2aa15);
+            
+        
+
+        marker_c995c0d22c03209f42ac497524ad22f8.bindPopup(popup_220af07855c681776050ba7a7cb2e587)
+        ;
+
+        
+    
+    
+            marker_c995c0d22c03209f42ac497524ad22f8.bindTooltip(
+                `<div>
+                     北京工业大学
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bdaeedcd97f28103adfb779b6f6f74e6 = L.marker(
+                [40.004483, 116.357223],
+                {
+}
+            ).addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+        var popup_6e098bc1497917fb48315091faf6c96c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_22e574cfff2a474ec41cfe29119b176b = $(`<div id="html_22e574cfff2a474ec41cfe29119b176b" style="width: 100.0%; height: 100.0%;">中国农业大学(东校区)<br>清华东路17号</div>`)[0];
+                popup_6e098bc1497917fb48315091faf6c96c.setContent(html_22e574cfff2a474ec41cfe29119b176b);
+            
+        
+
+        marker_bdaeedcd97f28103adfb779b6f6f74e6.bindPopup(popup_6e098bc1497917fb48315091faf6c96c)
+        ;
+
+        
+    
+    
+            marker_bdaeedcd97f28103adfb779b6f6f74e6.bindTooltip(
+                `<div>
+                     中国农业大学(东校区)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3fd30341afbf0f890d55d61af2c0ba20 = L.marker(
+                [39.99127, 116.349204],
+                {
+}
+            ).addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+        var popup_021d66c08310f8f5c65545f51cda3976 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2ea26c0074c47bc26efce4056f805354 = $(`<div id="html_2ea26c0074c47bc26efce4056f805354" style="width: 100.0%; height: 100.0%;">中国地质大学<br>学院路29号(学院桥地铁站A口步行350米)</div>`)[0];
+                popup_021d66c08310f8f5c65545f51cda3976.setContent(html_2ea26c0074c47bc26efce4056f805354);
+            
+        
+
+        marker_3fd30341afbf0f890d55d61af2c0ba20.bindPopup(popup_021d66c08310f8f5c65545f51cda3976)
+        ;
+
+        
+    
+    
+            marker_3fd30341afbf0f890d55d61af2c0ba20.bindTooltip(
+                `<div>
+                     中国地质大学
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b469ad9d22a7731229bcb87c1f6312a6 = L.marker(
+                [40.005901, 116.347477],
+                {
+}
+            ).addTo(map_8644df6f1ed2a892d194dec57a60de3a);
+        
+    
+        var popup_ec1136ca5757a90adeaebc99791a150d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bb92cff8d9d8f2e5b1d2b1ee2600cd2d = $(`<div id="html_bb92cff8d9d8f2e5b1d2b1ee2600cd2d" style="width: 100.0%; height: 100.0%;">北京林业大学<br>清华东路35号</div>`)[0];
+                popup_ec1136ca5757a90adeaebc99791a150d.setContent(html_bb92cff8d9d8f2e5b1d2b1ee2600cd2d);
+            
+        
+
+        marker_b469ad9d22a7731229bcb87c1f6312a6.bindPopup(popup_ec1136ca5757a90adeaebc99791a150d)
+        ;
+
+        
+    
+    
+            marker_b469ad9d22a7731229bcb87c1f6312a6.bindTooltip(
+                `<div>
+                     北京林业大学
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
