@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_10bbfec031d9c6b986159c2c042baab1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_10bbfec031d9c6b986159c2c042baab1" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_10bbfec031d9c6b986159c2c042baab1 = L.map(
+                "map_10bbfec031d9c6b986159c2c042baab1",
+                {
+                    center: [28.202088, 112.978514],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6299081d55a9163c48d85ca7a91d52aa = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_6299081d55a9163c48d85ca7a91d52aa.addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+            var marker_96589f07161d68ab4f441965807d29e4 = L.marker(
+                [28.202088, 112.978514],
+                {
+}
+            ).addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+        var popup_c6ab7f89b84df2e89f29edd4b8f77b42 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_38249b7d0a4fd91b7b464d11c29a56ca = $(`<div id="html_38249b7d0a4fd91b7b464d11c29a56ca" style="width: 100.0%; height: 100.0%;">麓山下咖啡馆(中山亭店)<br>望麓园街道又一村巷88号铂宫大厦201</div>`)[0];
+                popup_c6ab7f89b84df2e89f29edd4b8f77b42.setContent(html_38249b7d0a4fd91b7b464d11c29a56ca);
+            
+        
+
+        marker_96589f07161d68ab4f441965807d29e4.bindPopup(popup_c6ab7f89b84df2e89f29edd4b8f77b42)
+        ;
+
+        
+    
+    
+            marker_96589f07161d68ab4f441965807d29e4.bindTooltip(
+                `<div>
+                     麓山下咖啡馆(中山亭店)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cc385072099484af18f093d480559528 = L.marker(
+                [28.20132, 112.973428],
+                {
+}
+            ).addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+        var popup_844024ab849183ab6ef1eb4f4e4dc8df = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4262b70980200c2628dd621c1ab51337 = $(`<div id="html_4262b70980200c2628dd621c1ab51337" style="width: 100.0%; height: 100.0%;">YU2SPACE<br>通泰街街道中山西路388号共悦城市公园F栋1楼101号门面</div>`)[0];
+                popup_844024ab849183ab6ef1eb4f4e4dc8df.setContent(html_4262b70980200c2628dd621c1ab51337);
+            
+        
+
+        marker_cc385072099484af18f093d480559528.bindPopup(popup_844024ab849183ab6ef1eb4f4e4dc8df)
+        ;
+
+        
+    
+    
+            marker_cc385072099484af18f093d480559528.bindTooltip(
+                `<div>
+                     YU2SPACE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cf644cb30b76e3f8371a218b8611ea22 = L.marker(
+                [28.273203, 112.989049],
+                {
+}
+            ).addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+        var popup_8e4c47ea47ae439d57d96953d6ee682a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b09eb07a1b89a5f6f29f1b0d7b21ee90 = $(`<div id="html_b09eb07a1b89a5f6f29f1b0d7b21ee90" style="width: 100.0%; height: 100.0%;">冯棠树咖啡小院<br>捞刀河街道捞刀河社区10组454号</div>`)[0];
+                popup_8e4c47ea47ae439d57d96953d6ee682a.setContent(html_b09eb07a1b89a5f6f29f1b0d7b21ee90);
+            
+        
+
+        marker_cf644cb30b76e3f8371a218b8611ea22.bindPopup(popup_8e4c47ea47ae439d57d96953d6ee682a)
+        ;
+
+        
+    
+    
+            marker_cf644cb30b76e3f8371a218b8611ea22.bindTooltip(
+                `<div>
+                     冯棠树咖啡小院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5d5f644bb28b781e2abd991bfd4cf494 = L.marker(
+                [28.212186, 112.999723],
+                {
+}
+            ).addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+        var popup_ebbccbe129105f35443101826aa78df9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf1b1cbc1cd0c23a05b586277c7287db = $(`<div id="html_bf1b1cbc1cd0c23a05b586277c7287db" style="width: 100.0%; height: 100.0%;">公园咖啡(省博湖边二店)<br>清水塘街道湖南省烈士公园三月街</div>`)[0];
+                popup_ebbccbe129105f35443101826aa78df9.setContent(html_bf1b1cbc1cd0c23a05b586277c7287db);
+            
+        
+
+        marker_5d5f644bb28b781e2abd991bfd4cf494.bindPopup(popup_ebbccbe129105f35443101826aa78df9)
+        ;
+
+        
+    
+    
+            marker_5d5f644bb28b781e2abd991bfd4cf494.bindTooltip(
+                `<div>
+                     公园咖啡(省博湖边二店)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9e4f1f392b69f980beeb390677ce436f = L.marker(
+                [28.250494, 112.979134],
+                {
+}
+            ).addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+        var popup_83458db41d287a7e3e648cbc83759f7a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9bed1258a06b9a40392b611ca10bad04 = $(`<div id="html_9bed1258a06b9a40392b611ca10bad04" style="width: 100.0%; height: 100.0%;">一丹咖啡(方圆荟店)<br>金泰路199号方圆荟2层</div>`)[0];
+                popup_83458db41d287a7e3e648cbc83759f7a.setContent(html_9bed1258a06b9a40392b611ca10bad04);
+            
+        
+
+        marker_9e4f1f392b69f980beeb390677ce436f.bindPopup(popup_83458db41d287a7e3e648cbc83759f7a)
+        ;
+
+        
+    
+    
+            marker_9e4f1f392b69f980beeb390677ce436f.bindTooltip(
+                `<div>
+                     一丹咖啡(方圆荟店)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7f52035afead70c2b3f7ab9f2f452f0e = L.marker(
+                [28.199256, 112.970512],
+                {
+}
+            ).addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+        var popup_8924bd13eef11cd62b9ebed53b6699f7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41ffe78311c4055940ce4358f1914a90 = $(`<div id="html_41ffe78311c4055940ce4358f1914a90" style="width: 100.0%; height: 100.0%;">星巴克(长沙开福万达广场店)<br>中山路589号开福万达广场一楼1号门进门左侧1001号商铺</div>`)[0];
+                popup_8924bd13eef11cd62b9ebed53b6699f7.setContent(html_41ffe78311c4055940ce4358f1914a90);
+            
+        
+
+        marker_7f52035afead70c2b3f7ab9f2f452f0e.bindPopup(popup_8924bd13eef11cd62b9ebed53b6699f7)
+        ;
+
+        
+    
+    
+            marker_7f52035afead70c2b3f7ab9f2f452f0e.bindTooltip(
+                `<div>
+                     星巴克(长沙开福万达广场店)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_103f5a1c35e7acc1eaffb193394482e0 = L.marker(
+                [28.204109, 112.988937],
+                {
+}
+            ).addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+        var popup_5334d602ccac2d3707757de842f80a6c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a633577da111b7cdc5a96ba8fe4f1455 = $(`<div id="html_a633577da111b7cdc5a96ba8fe4f1455" style="width: 100.0%; height: 100.0%;">茴香空间<br>展览馆内综合楼一层南侧</div>`)[0];
+                popup_5334d602ccac2d3707757de842f80a6c.setContent(html_a633577da111b7cdc5a96ba8fe4f1455);
+            
+        
+
+        marker_103f5a1c35e7acc1eaffb193394482e0.bindPopup(popup_5334d602ccac2d3707757de842f80a6c)
+        ;
+
+        
+    
+    
+            marker_103f5a1c35e7acc1eaffb193394482e0.bindTooltip(
+                `<div>
+                     茴香空间
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1cba43b358c6363a4f2ae8b8ddfa6623 = L.marker(
+                [28.208354, 112.991643],
+                {
+}
+            ).addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+        var popup_22c9816a89f32fd4bbfcd20443e18994 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2e09113ef397583d50f2b2658f213342 = $(`<div id="html_2e09113ef397583d50f2b2658f213342" style="width: 100.0%; height: 100.0%;">公园咖啡(省博物院店)<br>湖南烈士公园西门南70米</div>`)[0];
+                popup_22c9816a89f32fd4bbfcd20443e18994.setContent(html_2e09113ef397583d50f2b2658f213342);
+            
+        
+
+        marker_1cba43b358c6363a4f2ae8b8ddfa6623.bindPopup(popup_22c9816a89f32fd4bbfcd20443e18994)
+        ;
+
+        
+    
+    
+            marker_1cba43b358c6363a4f2ae8b8ddfa6623.bindTooltip(
+                `<div>
+                     公园咖啡(省博物院店)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_acfb3727f0ac51e2211a26757bf7e3c3 = L.marker(
+                [28.2353, 113.030104],
+                {
+}
+            ).addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+        var popup_074b3e8bf423ead5e7cb1c4f47a9e00d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_586855bf72b1a45a07655afa91a5163f = $(`<div id="html_586855bf72b1a45a07655afa91a5163f" style="width: 100.0%; height: 100.0%;">有屿咖啡Unit Coffee(月湖店)<br>洪山路140号月湖文创小镇</div>`)[0];
+                popup_074b3e8bf423ead5e7cb1c4f47a9e00d.setContent(html_586855bf72b1a45a07655afa91a5163f);
+            
+        
+
+        marker_acfb3727f0ac51e2211a26757bf7e3c3.bindPopup(popup_074b3e8bf423ead5e7cb1c4f47a9e00d)
+        ;
+
+        
+    
+    
+            marker_acfb3727f0ac51e2211a26757bf7e3c3.bindTooltip(
+                `<div>
+                     有屿咖啡Unit Coffee(月湖店)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9868b1283d8668c31d8d46db172c7ae3 = L.marker(
+                [28.202464, 112.975267],
+                {
+}
+            ).addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+        var popup_9dac14dacb0536923ce90dd5aa65e587 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_156641be9594abaf8b961fed04d8b6cf = $(`<div id="html_156641be9594abaf8b961fed04d8b6cf" style="width: 100.0%; height: 100.0%;">PILLOW TALK<br>北正街烟霞巷12号(曾二嬢重庆火锅右侧旋转扶梯下来20米后左转)</div>`)[0];
+                popup_9dac14dacb0536923ce90dd5aa65e587.setContent(html_156641be9594abaf8b961fed04d8b6cf);
+            
+        
+
+        marker_9868b1283d8668c31d8d46db172c7ae3.bindPopup(popup_9dac14dacb0536923ce90dd5aa65e587)
+        ;
+
+        
+    
+    
+            marker_9868b1283d8668c31d8d46db172c7ae3.bindTooltip(
+                `<div>
+                     PILLOW TALK
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c8405e2c28407e52ac6039d377287ac0 = L.marker(
+                [28.238263, 113.032053],
+                {
+}
+            ).addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+        var popup_e32b772eefac2ac23e9bc1a41826ca76 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_637d96f480fb89c1d64d9cbfac359791 = $(`<div id="html_637d96f480fb89c1d64d9cbfac359791" style="width: 100.0%; height: 100.0%;">悦咖啡馆<br>月湖公园亚歌文化旁(长沙大学地铁站2号口步行350米)</div>`)[0];
+                popup_e32b772eefac2ac23e9bc1a41826ca76.setContent(html_637d96f480fb89c1d64d9cbfac359791);
+            
+        
+
+        marker_c8405e2c28407e52ac6039d377287ac0.bindPopup(popup_e32b772eefac2ac23e9bc1a41826ca76)
+        ;
+
+        
+    
+    
+            marker_c8405e2c28407e52ac6039d377287ac0.bindTooltip(
+                `<div>
+                     悦咖啡馆
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b17f1b9e0fbc845ae8b1e1ace0146fa3 = L.marker(
+                [28.21444, 112.987506],
+                {
+}
+            ).addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+        var popup_1636a3c0b036138622e702e51ad05032 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d73d3be3e62125a09839559a16a09323 = $(`<div id="html_d73d3be3e62125a09839559a16a09323" style="width: 100.0%; height: 100.0%;">星巴克臻选(长沙富兴国际金融中心店)<br>芙蓉中路一段303号长沙富兴国际金融中心1楼L135号</div>`)[0];
+                popup_1636a3c0b036138622e702e51ad05032.setContent(html_d73d3be3e62125a09839559a16a09323);
+            
+        
+
+        marker_b17f1b9e0fbc845ae8b1e1ace0146fa3.bindPopup(popup_1636a3c0b036138622e702e51ad05032)
+        ;
+
+        
+    
+    
+            marker_b17f1b9e0fbc845ae8b1e1ace0146fa3.bindTooltip(
+                `<div>
+                     星巴克臻选(长沙富兴国际金融中心店)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_62d10dd046ea60efd01193269a11645d = L.marker(
+                [28.198834, 112.973012],
+                {
+}
+            ).addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+        var popup_a77b5da66cc076dcbc4829c04ad90044 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3008d4265f1b50f7e2e94f4be4919023 = $(`<div id="html_3008d4265f1b50f7e2e94f4be4919023" style="width: 100.0%; height: 100.0%;">WooYoo无忧咖啡<br>永兴街55号</div>`)[0];
+                popup_a77b5da66cc076dcbc4829c04ad90044.setContent(html_3008d4265f1b50f7e2e94f4be4919023);
+            
+        
+
+        marker_62d10dd046ea60efd01193269a11645d.bindPopup(popup_a77b5da66cc076dcbc4829c04ad90044)
+        ;
+
+        
+    
+    
+            marker_62d10dd046ea60efd01193269a11645d.bindTooltip(
+                `<div>
+                     WooYoo无忧咖啡
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_eabab179e01b0085e17d68a080e1486b = L.marker(
+                [28.216303, 112.987876],
+                {
+}
+            ).addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+        var popup_553d823c2c2eec0382fc3c8cf87e98ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_103f610fde9caabefc140e81864e81bc = $(`<div id="html_103f610fde9caabefc140e81864e81bc" style="width: 100.0%; height: 100.0%;">瑞幸咖啡(CFC富兴时代店)<br>芙蓉中路cfc富兴时代B号门</div>`)[0];
+                popup_553d823c2c2eec0382fc3c8cf87e98ba.setContent(html_103f610fde9caabefc140e81864e81bc);
+            
+        
+
+        marker_eabab179e01b0085e17d68a080e1486b.bindPopup(popup_553d823c2c2eec0382fc3c8cf87e98ba)
+        ;
+
+        
+    
+    
+            marker_eabab179e01b0085e17d68a080e1486b.bindTooltip(
+                `<div>
+                     瑞幸咖啡(CFC富兴时代店)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_091bdd4b0fbefa9b7ce7e0719edf4e73 = L.marker(
+                [28.224555, 112.992277],
+                {
+}
+            ).addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+        var popup_83d1c6aaa9e0db27eb37623b0f30e35a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b4551ffdee1cc69c306139c3aecefb85 = $(`<div id="html_b4551ffdee1cc69c306139c3aecefb85" style="width: 100.0%; height: 100.0%;">远近Far&Near(华创店)<br>东风路铁路机械化工局园区内</div>`)[0];
+                popup_83d1c6aaa9e0db27eb37623b0f30e35a.setContent(html_b4551ffdee1cc69c306139c3aecefb85);
+            
+        
+
+        marker_091bdd4b0fbefa9b7ce7e0719edf4e73.bindPopup(popup_83d1c6aaa9e0db27eb37623b0f30e35a)
+        ;
+
+        
+    
+    
+            marker_091bdd4b0fbefa9b7ce7e0719edf4e73.bindTooltip(
+                `<div>
+                     远近Far&Near(华创店)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cdb78a0db2af028e3812761b549ed27d = L.marker(
+                [28.198264, 112.975007],
+                {
+}
+            ).addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+        var popup_e1a41eff96d4b6c519ca5c0ec6bbce2d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_48c8e2e8627ac9f57e68786119834c9d = $(`<div id="html_48c8e2e8627ac9f57e68786119834c9d" style="width: 100.0%; height: 100.0%;">GOODHOOD古德胡同 coffee&balla<br>燎原巷2号(五一广场地铁站6A口步行330米)</div>`)[0];
+                popup_e1a41eff96d4b6c519ca5c0ec6bbce2d.setContent(html_48c8e2e8627ac9f57e68786119834c9d);
+            
+        
+
+        marker_cdb78a0db2af028e3812761b549ed27d.bindPopup(popup_e1a41eff96d4b6c519ca5c0ec6bbce2d)
+        ;
+
+        
+    
+    
+            marker_cdb78a0db2af028e3812761b549ed27d.bindTooltip(
+                `<div>
+                     GOODHOOD古德胡同 coffee&balla
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0948a2e99f69744418d70f278b6b2363 = L.marker(
+                [28.221277, 113.006397],
+                {
+}
+            ).addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+        var popup_4af84e2031a9571ca1662c8e928f2452 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_209a7e8e01c4ac4796e8023cbf9b923b = $(`<div id="html_209a7e8e01c4ac4796e8023cbf9b923b" style="width: 100.0%; height: 100.0%;">cloudy coffee<br>德雅路800号胜利小区8栋106室</div>`)[0];
+                popup_4af84e2031a9571ca1662c8e928f2452.setContent(html_209a7e8e01c4ac4796e8023cbf9b923b);
+            
+        
+
+        marker_0948a2e99f69744418d70f278b6b2363.bindPopup(popup_4af84e2031a9571ca1662c8e928f2452)
+        ;
+
+        
+    
+    
+            marker_0948a2e99f69744418d70f278b6b2363.bindTooltip(
+                `<div>
+                     cloudy coffee
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6f2d4789e42be2591132cb453660928f = L.marker(
+                [28.237073, 112.983694],
+                {
+}
+            ).addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+        var popup_ca82efb2e2a70d2dc34fe3957f217769 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2a2f1258c196b883d6e4ea951106217a = $(`<div id="html_2a2f1258c196b883d6e4ea951106217a" style="width: 100.0%; height: 100.0%;">星巴克(北辰凤凰海店)<br>晴岚路68号北辰凤凰海购物公园一层L1-013单元区</div>`)[0];
+                popup_ca82efb2e2a70d2dc34fe3957f217769.setContent(html_2a2f1258c196b883d6e4ea951106217a);
+            
+        
+
+        marker_6f2d4789e42be2591132cb453660928f.bindPopup(popup_ca82efb2e2a70d2dc34fe3957f217769)
+        ;
+
+        
+    
+    
+            marker_6f2d4789e42be2591132cb453660928f.bindTooltip(
+                `<div>
+                     星巴克(北辰凤凰海店)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1489e0bf600a0080afdcc7692499ca8b = L.marker(
+                [28.236372, 113.04818],
+                {
+}
+            ).addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+        var popup_dd19244701cd3b7d1d81b0f10c62c1b6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6e76e3c4e0b378e53a4f72bf87aacf4e = $(`<div id="html_6e76e3c4e0b378e53a4f72bf87aacf4e" style="width: 100.0%; height: 100.0%;">时光之尘咖啡(广电粉丝街店)<br>会展路电广传媒5号</div>`)[0];
+                popup_dd19244701cd3b7d1d81b0f10c62c1b6.setContent(html_6e76e3c4e0b378e53a4f72bf87aacf4e);
+            
+        
+
+        marker_1489e0bf600a0080afdcc7692499ca8b.bindPopup(popup_dd19244701cd3b7d1d81b0f10c62c1b6)
+        ;
+
+        
+    
+    
+            marker_1489e0bf600a0080afdcc7692499ca8b.bindTooltip(
+                `<div>
+                     时光之尘咖啡(广电粉丝街店)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c708671cfdb66f0e89c095d54c6a350e = L.marker(
+                [28.249042, 112.994123],
+                {
+}
+            ).addTo(map_10bbfec031d9c6b986159c2c042baab1);
+        
+    
+        var popup_81f95ab65975e99b4fb6dd4017652fc7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc41fc4f14da84dec688fdb1450644fd = $(`<div id="html_dc41fc4f14da84dec688fdb1450644fd" style="width: 100.0%; height: 100.0%;">Cafe BAI<br>万科城一期9栋101</div>`)[0];
+                popup_81f95ab65975e99b4fb6dd4017652fc7.setContent(html_dc41fc4f14da84dec688fdb1450644fd);
+            
+        
+
+        marker_c708671cfdb66f0e89c095d54c6a350e.bindPopup(popup_81f95ab65975e99b4fb6dd4017652fc7)
+        ;
+
+        
+    
+    
+            marker_c708671cfdb66f0e89c095d54c6a350e.bindTooltip(
+                `<div>
+                     Cafe BAI
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
