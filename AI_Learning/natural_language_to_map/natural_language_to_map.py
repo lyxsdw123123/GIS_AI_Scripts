@@ -50,6 +50,39 @@ def get_poi(city, keyword):
     return data.get("pois", [])
 
 
+def get_district_boundary(city):
+    url = "https://restapi.amap.com/v3/config/district"
+    params = {
+        "key": AMAP_KEY,
+        "keywords": city,
+        "subdistrict": 0,
+        "extensions": "all"
+    }
+
+    res = requests.get(url, params=params)
+    data = res.json()
+    districts = data.get("districts", [])
+    if not districts:
+        return []
+
+    polyline = districts[0].get("polyline", "")
+    if not polyline:
+        return []
+
+    polygons = []
+    for polygon_text in polyline.split("|"):
+        points = []
+        for point_text in polygon_text.split(";"):
+            if not point_text:
+                continue
+            lng, lat = point_text.split(",")
+            points.append([float(lat), float(lng)])
+        if points:
+            polygons.append(points)
+
+    return polygons
+
+
 # ==================================================
 # 生成地图
 # ==================================================
@@ -65,7 +98,22 @@ def create_map(city, keyword, pois):
         zoom_start=12
     )
 
+    boundary_group = folium.FeatureGroup(name=f"{city}行政区边界")
+    marker_group = folium.FeatureGroup(name=f"{keyword}点位")
     heat_data = []
+
+    district_polygons = get_district_boundary(city)
+    for polygon in district_polygons:
+        folium.Polygon(
+            locations=polygon,
+            color="blue",
+            weight=2,
+            fill=True,
+            fill_color="blue",
+            fill_opacity=0.08,
+            popup=f"{city}行政区边界"
+        ).add_to(boundary_group)
+    boundary_group.add_to(m)
 
     for poi in pois:
         name = poi["name"]
@@ -80,7 +128,8 @@ def create_map(city, keyword, pois):
             location=[lat_f, lng_f],
             popup=f"{name}<br>{addr}",
             tooltip=name
-        ).add_to(m)
+        ).add_to(marker_group)
+    marker_group.add_to(m)
 
     HeatMap(
         heat_data,
