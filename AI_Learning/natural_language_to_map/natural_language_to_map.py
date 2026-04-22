@@ -33,22 +33,42 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 # ==================================================
 # 调用高德POI
 # ==================================================
-def get_poi(city, keyword):
+def get_poi(city, keyword, per_page=25, max_pages=5, max_items=200):
     url = "https://restapi.amap.com/v3/place/text"
+    all_pois = []
+    per_page = min(per_page, 25)
+    target_count = min(max_items, per_page * max_pages)
 
-    params = {
-        "key": AMAP_KEY,
-        "keywords": keyword,
-        "city": city,
-        "offset": 20,
-        "page": 1
-    }
+    for page in range(1, max_pages + 1):
+        params = {
+            "key": AMAP_KEY,
+            "keywords": keyword,
+            "city": city,
+            "offset": per_page,
+            "page": page
+        }
 
-    res = requests.get(url, params=params)
-    data = res.json()
+        try:
+            res = requests.get(url, params=params, timeout=15)
+            data = res.json()
+        except Exception:
+            break
 
-    return data.get("pois", [])
+        pois = data.get("pois", [])
+        if not pois:
+            break
 
+        remain = target_count - len(all_pois)
+        all_pois.extend(pois[:remain])
+
+        if len(all_pois) >= target_count:
+            break
+
+        if len(pois) < per_page:
+            break
+
+    print(f"共获取POI数量：{len(all_pois)}")
+    return all_pois
 
 def get_district_boundary(city):
     url = "https://restapi.amap.com/v3/config/district"
