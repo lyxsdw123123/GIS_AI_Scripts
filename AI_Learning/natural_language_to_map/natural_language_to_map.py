@@ -2,6 +2,7 @@
 
 import requests
 import folium
+from folium.plugins import HeatMap
 from pathlib import Path
 import sys
 
@@ -64,16 +65,32 @@ def create_map(city, keyword, pois):
         zoom_start=12
     )
 
+    heat_data = []
+
     for poi in pois:
         name = poi["name"]
         addr = poi.get("address", "无地址")
         lng, lat = poi["location"].split(",")
+        lat_f = float(lat)
+        lng_f = float(lng)
+
+        heat_data.append([lat_f, lng_f])
 
         folium.Marker(
-            location=[float(lat), float(lng)],
+            location=[lat_f, lng_f],
             popup=f"{name}<br>{addr}",
             tooltip=name
         ).add_to(m)
+
+    HeatMap(
+        heat_data,
+        name=f"{keyword}热力图",
+        radius=18,
+        blur=12,
+        min_opacity=0.3
+    ).add_to(m)
+
+    folium.LayerControl().add_to(m)
 
     # 输出文件
     filename = f"{city}_{keyword}_分布地图.html"
