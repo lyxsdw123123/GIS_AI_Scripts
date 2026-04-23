@@ -3,6 +3,7 @@
 import requests
 import folium
 from folium.plugins import HeatMap
+from branca.element import MacroElement, Template
 from pathlib import Path
 import sys
 
@@ -115,7 +116,8 @@ def create_map(city, keyword, pois):
 
     m = folium.Map(
         location=[float(lat), float(lng)],
-        zoom_start=12
+        zoom_start=12,
+        zoom_control=False
     )
 
     boundary_group = folium.FeatureGroup(name=f"{city}行政区边界")
@@ -158,6 +160,19 @@ def create_map(city, keyword, pois):
         blur=12,
         min_opacity=0.3
     ).add_to(m)
+
+    poi_count_box = MacroElement()
+    poi_count_box._template = Template(
+        """
+{% macro html(this, kwargs) %}
+<div style="position: fixed; top: 10px; left: 10px; z-index: 9999; background-color: rgba(255, 255, 255, 0.92); border: 1px solid #333; padding: 6px 10px; border-radius: 6px; font-size: 14px;">
+  POI数量：{{ this.poi_count }}
+</div>
+{% endmacro %}
+"""
+    )
+    poi_count_box.poi_count = len(pois)
+    m.get_root().add_child(poi_count_box)
 
     folium.LayerControl().add_to(m)
 
