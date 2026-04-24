@@ -1,0 +1,7 @@
+一键运行
+uvicorn Python_Basic.My_first_fastapi.main:app --reload
+
+网址
+http://127.0.0.1:8000/
+http://127.0.0.1:8000/about
+http://127.0.0.1:8000/add?a=3&b=8

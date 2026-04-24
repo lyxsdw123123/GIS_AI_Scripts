@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>My First FastAPI - 前端页面</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Microsoft YaHei", sans-serif; padding: 24px; max-width: 720px; margin: 0 auto; }
+      h1 { margin: 0 0 16px; font-size: 22px; }
+      .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; }
+      .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: end; }
+      label { display: block; font-size: 13px; color: #374151; margin-bottom: 6px; }
+      input { width: 160px; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 10px; font-size: 14px; }
+      button { padding: 10px 14px; border: 0; border-radius: 10px; background: #111827; color: #fff; font-size: 14px; cursor: pointer; }
+      button:disabled { opacity: .6; cursor: not-allowed; }
+      pre { background: #0b1020; color: #e5e7eb; padding: 12px; border-radius: 12px; overflow: auto; }
+      .muted { color: #6b7280; font-size: 13px; margin-top: 12px; }
+      a { color: #2563eb; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+    </style>
+  </head>
+  <body>
+    <h1>My First FastAPI - 前端页面</h1>
+    <div class="card">
+      <div class="row">
+        <div>
+          <label for="a">a</label>
+          <input id="a" type="number" inputmode="numeric" value="1" />
+        </div>
+        <div>
+          <label for="b">b</label>
+          <input id="b" type="number" inputmode="numeric" value="2" />
+        </div>
+        <div>
+          <button id="btn">计算 a + b</button>
+        </div>
+      </div>
+      <div style="margin-top: 14px;">
+        <div class="muted">调用接口：<code>/add?a=...&b=...</code></div>
+        <pre id="out">{ "result": 3 }</pre>
+      </div>
+      <div class="muted">
+        快捷入口：
+        <a href="/docs" target="_blank" rel="noreferrer">Swagger</a>
+        ·
+        <a href="/about" target="_blank" rel="noreferrer">/about</a>
+        ·
+        <a href="/" target="_blank" rel="noreferrer">/</a>
+      </div>
+    </div>
+
+    <script>
+      const aEl = document.getElementById("a");
+      const bEl = document.getElementById("b");
+      const btn = document.getElementById("btn");
+      const out = document.getElementById("out");
+
+      function toInt(value) {
+        const n = Number(value);
+        if (!Number.isFinite(n)) return null;
+        return Math.trunc(n);
+      }
+
+      async function run() {
+        const a = toInt(aEl.value);
+        const b = toInt(bEl.value);
+        if (a === null || b === null) {
+          out.textContent = "请输入有效数字";
+          return;
+        }
+
+        btn.disabled = true;
+        out.textContent = "请求中...";
+        try {
+          const resp = await fetch(`/add?a=${encodeURIComponent(a)}&b=${encodeURIComponent(b)}`);
+          const data = await resp.json();
+          out.textContent = JSON.stringify(data, null, 2);
+        } catch (e) {
+          out.textContent = "请求失败：" + (e && e.message ? e.message : String(e));
+        } finally {
+          btn.disabled = false;
+        }
+      }
+
+      btn.addEventListener("click", run);
+    </script>
+  </body>
+</html>
