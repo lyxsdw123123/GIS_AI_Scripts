@@ -3,15 +3,19 @@ from pathlib import Path
 from fastapi import FastAPI
 from fastapi import HTTPException
 from fastapi.responses import HTMLResponse
+from pydantic import BaseModel
 
 app = FastAPI()
 
 BASE_DIR = Path(__file__).resolve().parent
+HOME_HTML_PATH = BASE_DIR / "home.html"
 UI_HTML_PATH = BASE_DIR / "ui.html"
 
-@app.get("/")
+@app.get("/", response_class=HTMLResponse)
 def home():
-    return {"message": "首页成功"}
+    if not HOME_HTML_PATH.exists():
+        raise HTTPException(status_code=500, detail="home.html 不存在")
+    return HOME_HTML_PATH.read_text(encoding="utf-8")
 
 @app.get("/about")
 def about():
@@ -20,6 +24,15 @@ def about():
 @app.get("/add")
 def add(a:int,b:int):
     return {"result": a+b}
+
+class AddRequest(BaseModel):
+    a: int
+    b: int
+
+
+@app.post("/add")
+def add_post(payload: AddRequest):
+    return {"result": payload.a + payload.b}
 
 
 @app.get("/ui", response_class=HTMLResponse)
