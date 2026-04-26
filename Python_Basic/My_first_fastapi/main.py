@@ -2,6 +2,8 @@ from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi import HTTPException
+from fastapi import Request
+from fastapi import Response
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 
@@ -10,6 +12,10 @@ app = FastAPI()
 BASE_DIR = Path(__file__).resolve().parent
 HOME_HTML_PATH = BASE_DIR / "home.html"
 UI_HTML_PATH = BASE_DIR / "ui.html"
+
+COOKIE_NAME = "demo_user"
+DEMO_USERNAME = "admin"
+DEMO_PASSWORD = "123456"
 
 @app.get("/", response_class=HTMLResponse)
 def home():
@@ -33,6 +39,34 @@ class AddRequest(BaseModel):
 @app.post("/add")
 def add_post(payload: AddRequest):
     return {"result": payload.a + payload.b}
+
+
+class LoginRequest(BaseModel):
+    username: str
+    password: str
+
+
+@app.post("/login")
+def login(payload: LoginRequest, response: Response):
+    if payload.username != DEMO_USERNAME or payload.password != DEMO_PASSWORD:
+        raise HTTPException(status_code=401, detail="用户名或密码错误")
+
+    response.set_cookie(COOKIE_NAME, payload.username, httponly=True, samesite="lax")
+    return {"ok": True, "username": payload.username}
+
+
+@app.post("/logout")
+def logout(response: Response):
+    response.delete_cookie(COOKIE_NAME)
+    return {"ok": True}
+
+
+@app.get("/me")
+def me(request: Request):
+    username = request.cookies.get(COOKIE_NAME)
+    if not username:
+        return {"logged_in": False}
+    return {"logged_in": True, "username": username}
 
 
 @app.get("/ui", response_class=HTMLResponse)

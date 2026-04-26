@@ -26,6 +26,30 @@
     <div class="muted">这是一个简单的首页界面：提供导航入口 + 一个加法小工具。</div>
 
     <div class="card">
+      <div class="row">
+        <div>
+          <label for="username">用户名</label>
+          <input id="username" type="text" autocomplete="username" placeholder="admin" />
+        </div>
+        <div>
+          <label for="password">密码</label>
+          <input id="password" type="password" autocomplete="current-password" placeholder="123456" />
+        </div>
+        <div>
+          <button id="btn-login">登录</button>
+        </div>
+        <div>
+          <button class="secondary" id="btn-logout" disabled>登出</button>
+        </div>
+      </div>
+      <div class="muted" style="margin-top: 10px;">演示账号：admin / 123456</div>
+      <div style="margin-top: 14px;">
+        <div class="muted">当前状态：</div>
+        <pre id="auth-out">未登录</pre>
+      </div>
+    </div>
+
+    <div class="card">
       <div class="actions">
         <button class="secondary" id="go-ui">打开 /ui 页面</button>
         <button class="secondary" id="go-docs">打开 /docs（Swagger）</button>
@@ -67,9 +91,71 @@
       const btn = document.getElementById("btn");
       const out = document.getElementById("out");
 
+      const usernameEl = document.getElementById("username");
+      const passwordEl = document.getElementById("password");
+      const loginBtn = document.getElementById("btn-login");
+      const logoutBtn = document.getElementById("btn-logout");
+      const authOut = document.getElementById("auth-out");
+
       document.getElementById("go-ui").addEventListener("click", () => window.location.href = "/ui");
       document.getElementById("go-docs").addEventListener("click", () => window.open("/docs", "_blank"));
       document.getElementById("go-about").addEventListener("click", () => window.open("/about", "_blank"));
+
+      async function refreshMe() {
+        try {
+          const resp = await fetch("/me");
+          const data = await resp.json();
+          if (data && data.logged_in) {
+            authOut.textContent = `已登录：${data.username}`;
+            logoutBtn.disabled = false;
+          } else {
+            authOut.textContent = "未登录";
+            logoutBtn.disabled = true;
+          }
+        } catch (e) {
+          authOut.textContent = "状态获取失败";
+          logoutBtn.disabled = true;
+        }
+      }
+
+      async function postJson(url, payload) {
+        const resp = await fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        const data = await resp.json().catch(() => ({}));
+        if (!resp.ok) {
+          const msg = data && data.detail ? data.detail : `请求失败(${resp.status})`;
+          throw new Error(msg);
+        }
+        return data;
+      }
+
+      loginBtn.addEventListener("click", async () => {
+        loginBtn.disabled = true;
+        try {
+          await postJson("/login", { username: usernameEl.value, password: passwordEl.value });
+          passwordEl.value = "";
+          await refreshMe();
+        } catch (e) {
+          authOut.textContent = e && e.message ? e.message : String(e);
+        } finally {
+          loginBtn.disabled = false;
+        }
+      });
+
+      logoutBtn.addEventListener("click", async () => {
+        logoutBtn.disabled = true;
+        try {
+          await fetch("/logout", { method: "POST" });
+          await refreshMe();
+        } catch (e) {
+          authOut.textContent = "登出失败";
+        }
+      });
+
+      refreshMe();
 
       function toInt(value) {
         const n = Number(value);
