@@ -85,11 +85,31 @@
       </div>
     </div>
 
+    <div class="card">
+      <div class="row">
+        <div>
+          <label for="item-id">item_id（路径参数）</label>
+          <input id="item-id" type="number" inputmode="numeric" value="1" />
+        </div>
+        <div>
+          <button id="btn-item">查询 /items/{item_id}</button>
+        </div>
+      </div>
+      <div style="margin-top: 14px;">
+        <div class="muted">调用接口：<code>GET /items/{item_id}</code></div>
+        <pre id="item-out">{ "item_id": 1, "message": "你访问了 item 1" }</pre>
+      </div>
+    </div>
+
     <script>
       const aEl = document.getElementById("a");
       const bEl = document.getElementById("b");
       const btn = document.getElementById("btn");
       const out = document.getElementById("out");
+
+      const itemIdEl = document.getElementById("item-id");
+      const itemBtn = document.getElementById("btn-item");
+      const itemOut = document.getElementById("item-out");
 
       const usernameEl = document.getElementById("username");
       const passwordEl = document.getElementById("password");
@@ -189,6 +209,28 @@
       }
 
       btn.addEventListener("click", run);
+
+      async function runItem() {
+        const itemId = toInt(itemIdEl.value);
+        if (itemId === null) {
+          itemOut.textContent = "请输入有效数字";
+          return;
+        }
+
+        itemBtn.disabled = true;
+        itemOut.textContent = "请求中...";
+        try {
+          const resp = await fetch(`/items/${encodeURIComponent(itemId)}`);
+          const data = await resp.json();
+          itemOut.textContent = JSON.stringify(data, null, 2);
+        } catch (e) {
+          itemOut.textContent = "请求失败：" + (e && e.message ? e.message : String(e));
+        } finally {
+          itemBtn.disabled = false;
+        }
+      }
+
+      itemBtn.addEventListener("click", runItem);
     </script>
   </body>
 </html>

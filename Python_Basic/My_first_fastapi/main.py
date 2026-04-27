@@ -27,6 +27,10 @@ def home():
 def about():
     return {"name": "我的第一个FastAPI项目"}
 
+@app.get("/items/{item_id}")
+def get_item(item_id: int):
+    return {"item_id": item_id, "message": f"你访问了 item {item_id}"}
+
 @app.get("/add")
 def add(a:int,b:int):
     return {"result": a+b}
