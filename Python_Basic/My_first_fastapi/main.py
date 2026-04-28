@@ -17,6 +17,12 @@ COOKIE_NAME = "demo_user"
 DEMO_USERNAME = "admin"
 DEMO_PASSWORD = "123456"
 
+ITEMS_DB = {
+    1: {"name": "苹果", "price": 3.5},
+    2: {"name": "香蕉", "price": 2.8},
+    3: {"name": "橙子", "price": 4.2},
+}
+
 @app.get("/", response_class=HTMLResponse)
 def home():
     if not HOME_HTML_PATH.exists():
@@ -29,7 +35,10 @@ def about():
 
 @app.get("/items/{item_id}")
 def get_item(item_id: int):
-    return {"item_id": item_id, "message": f"你访问了 item {item_id}"}
+    item = ITEMS_DB.get(item_id)
+    if item is None:
+        raise HTTPException(status_code=404, detail="item 不存在")
+    return {"item_id": item_id, "item": item}
 
 @app.get("/add")
 def add(a:int,b:int):
