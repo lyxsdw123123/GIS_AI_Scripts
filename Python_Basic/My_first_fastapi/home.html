@@ -101,6 +101,22 @@
       </div>
     </div>
 
+    <div class="card">
+      <div class="row">
+        <div>
+          <label for="upload-file">选择文件</label>
+          <input id="upload-file" type="file" />
+        </div>
+        <div>
+          <button id="btn-upload">上传到 /upload</button>
+        </div>
+      </div>
+      <div style="margin-top: 14px;">
+        <div class="muted">调用接口：<code>POST /upload</code>（multipart/form-data）</div>
+        <pre id="upload-out">未上传</pre>
+      </div>
+    </div>
+
     <script>
       const aEl = document.getElementById("a");
       const bEl = document.getElementById("b");
@@ -110,6 +126,10 @@
       const itemIdEl = document.getElementById("item-id");
       const itemBtn = document.getElementById("btn-item");
       const itemOut = document.getElementById("item-out");
+
+      const uploadFileEl = document.getElementById("upload-file");
+      const uploadBtn = document.getElementById("btn-upload");
+      const uploadOut = document.getElementById("upload-out");
 
       const usernameEl = document.getElementById("username");
       const passwordEl = document.getElementById("password");
@@ -231,6 +251,35 @@
       }
 
       itemBtn.addEventListener("click", runItem);
+
+      async function runUpload() {
+        const file = uploadFileEl.files && uploadFileEl.files[0] ? uploadFileEl.files[0] : null;
+        if (!file) {
+          uploadOut.textContent = "请先选择一个文件";
+          return;
+        }
+
+        const form = new FormData();
+        form.append("file", file);
+
+        uploadBtn.disabled = true;
+        uploadOut.textContent = "上传中...";
+        try {
+          const resp = await fetch("/upload", { method: "POST", body: form });
+          const data = await resp.json().catch(() => ({}));
+          if (!resp.ok) {
+            const msg = data && data.detail ? data.detail : `上传失败(${resp.status})`;
+            throw new Error(msg);
+          }
+          uploadOut.textContent = JSON.stringify(data, null, 2);
+        } catch (e) {
+          uploadOut.textContent = "上传失败：" + (e && e.message ? e.message : String(e));
+        } finally {
+          uploadBtn.disabled = false;
+        }
+      }
+
+      uploadBtn.addEventListener("click", runUpload);
     </script>
   </body>
 </html>

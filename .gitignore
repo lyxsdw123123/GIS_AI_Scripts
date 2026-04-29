@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 .env
 AI_Learning/natural_language_to_map/output/
+Python_Basic\My_first_fastapi\uploads

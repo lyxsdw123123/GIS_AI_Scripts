@@ -1,9 +1,13 @@
 from pathlib import Path
+import shutil
+import uuid
 
 from fastapi import FastAPI
+from fastapi import File
 from fastapi import HTTPException
 from fastapi import Request
 from fastapi import Response
+from fastapi import UploadFile
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 
@@ -80,6 +84,27 @@ def me(request: Request):
     if not username:
         return {"logged_in": False}
     return {"logged_in": True, "username": username}
+
+@app.post("/upload")
+def upload(file: UploadFile = File(...)):
+    uploads_dir = BASE_DIR / "uploads"
+    uploads_dir.mkdir(parents=True, exist_ok=True)
+
+    original_name = Path(file.filename or "upload.bin").name
+    saved_name = f"{uuid.uuid4().hex}_{original_name}"
+    saved_path = uploads_dir / saved_name
+
+    with saved_path.open("wb") as f:
+        shutil.copyfileobj(file.file, f)
+
+    return {
+        "ok": True,
+        "original_filename": original_name,
+        "saved_filename": saved_name,
+        "content_type": file.content_type,
+        "size_bytes": saved_path.stat().st_size,
+        "saved_path": str(saved_path),
+    }
 
 
 @app.get("/ui", response_class=HTMLResponse)
