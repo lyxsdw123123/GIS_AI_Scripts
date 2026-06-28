@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>小旅 · 旅行智能体</title>
+<link rel="stylesheet" href="/static/css/style.css">
+<script src="/static/js/map.js" defer></script>
+<script src="/static/js/app.js" defer></script>
+</head>
+<body>
+
+<!-- 顶部氛围栏 -->
+<header id="topbar">
+  <div class="topbar-bg"></div>
+  <div class="topbar-content">
+    <span class="logo">🧳 小旅</span>
+    <span id="header-location"></span>
+    <span id="header-weather"></span>
+  </div>
+</header>
+
+<!-- 地图区域 -->
+<section id="map-section">
+  <div id="map-container"></div>
+  <div id="map-placeholder">
+    <div class="placeholder-icon">🗺️</div>
+    <p>告诉我你在哪，地图即刻点亮 ✨</p>
+  </div>
+</section>
+
+<!-- 状态面板（折叠式） -->
+<section id="state-panel">
+  <div class="state-toggle" id="state-toggle">
+    <span>⚙️ 调整我的状态</span>
+    <span class="toggle-arrow">▾</span>
+  </div>
+
+  <div class="state-body" id="state-body">
+    <!-- 位置 -->
+    <div class="state-row">
+      <label>📍 你在哪里？</label>
+      <input type="text" id="input-location" placeholder="城市或区域，如：杭州西湖区"
+             class="input-field" autocomplete="off">
+      <button class="btn-locate" id="btn-locate" title="自动定位">📍</button>
+    </div>
+
+    <!-- 心情 -->
+    <div class="state-row">
+      <label>😊 心情如何？</label>
+      <div class="emoji-picker" data-key="mood">
+        <button data-value="2" title="很低落">😫</button>
+        <button data-value="4" title="有点烦">😟</button>
+        <button data-value="6" title="还行" class="active">😐</button>
+        <button data-value="8" title="挺开心">😊</button>
+        <button data-value="10" title="超兴奋">🤩</button>
+      </div>
+    </div>
+
+    <!-- 疲惫度 -->
+    <div class="state-row">
+      <label>⚡ 精力状态？</label>
+      <div class="slider-group">
+        <span>⚡ 精力充沛</span>
+        <input type="range" id="slider-fatigue" min="1" max="10" value="5" class="slider">
+        <span>😴 很累了</span>
+      </div>
+    </div>
+
+    <!-- 好奇心 -->
+    <div class="state-row">
+      <label>🔍 探索欲？</label>
+      <div class="slider-group">
+        <span>🛋️ 只想躺平</span>
+        <input type="range" id="slider-curiosity" min="1" max="10" value="5" class="slider">
+        <span>🔥 什么都想试</span>
+      </div>
+    </div>
+
+    <!-- 同行者 -->
+    <div class="state-row">
+      <label>👥 和谁一起？</label>
+      <div class="chip-group" data-key="companion">
+        <button data-value="独自">🧑‍💻 独自</button>
+        <button data-value="情侣">💑 情侣</button>
+        <button data-value="带娃">👨‍👩‍👧 带娃</button>
+        <button data-value="朋友">👬 朋友</button>
+        <button data-value="父母">👴 父母</button>
+      </div>
+    </div>
+
+    <!-- 偏好 -->
+    <div class="state-row">
+      <label>💡 喜欢什么？（可多选）</label>
+      <div class="chip-group multi" data-key="preferences">
+        <button data-value="自然风光">🌿 自然风光</button>
+        <button data-value="美食">🍜 美食</button>
+        <button data-value="历史文化">🏛️ 历史文化</button>
+        <button data-value="购物">🛍️ 购物</button>
+        <button data-value="拍照打卡">📸 拍照打卡</button>
+        <button data-value="安静文艺">☕ 安静文艺</button>
+        <button data-value="避开人多">🍃 避开人多</button>
+        <button data-value="网红新潮">🔥 网红新潮</button>
+      </div>
+    </div>
+
+    <!-- 预算 -->
+    <div class="state-row">
+      <label>💰 人均预算？</label>
+      <div class="chip-group" data-key="budget">
+        <button data-value="100以内">💸 100以内</button>
+        <button data-value="100-300">💵 100-300</button>
+        <button data-value="300-500">💳 300-500</button>
+        <button data-value="不设限">👑 不设限</button>
+      </div>
+    </div>
+
+    <!-- 开始按钮 -->
+    <button class="btn-plan" id="btn-plan">
+      ✨ 开始规划我的旅程
+    </button>
+  </div>
+</section>
+
+<!-- 推荐卡片 / 对话区 -->
+<section id="chat-section">
+  <div id="chat-messages"></div>
+  <!-- 对话输入 -->
+  <div id="chat-input-row">
+    <input type="text" id="input-chat"
+           placeholder="继续聊聊你的想法..."
+           class="input-field chat-input"
+           autocomplete="off">
+    <button id="btn-send" class="btn-send">发送</button>
+  </div>
+</section>
+
+<!-- 加载遮罩 -->
+<div id="loading-overlay" class="hidden">
+  <div class="spinner"></div>
+  <p>正在为你规划旅程...</p>
+</div>
+
+<!-- POI 详情浮层 -->
+<div id="poi-detail" class="hidden">
+  <div class="poi-detail-content">
+    <button class="poi-detail-close" id="poi-detail-close">✕</button>
+    <h3 id="poi-detail-name"></h3>
+    <p id="poi-detail-addr"></p>
+    <p id="poi-detail-rating"></p>
+    <button class="btn-ask-more" id="btn-ask-more">💬 了解更多</button>
+  </div>
+</div>
+
+</body>
+</html>
